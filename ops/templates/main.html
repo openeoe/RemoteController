@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Operator
+    </title>
+</head>
+<body>
+    <form method="POST" action="/calculate">
+        <h1> Operator</h1>
+        <h3> 1. 조합을 드랍다운에서 선택하세요.</br></h3>
+        <h3> 2. 질문을 질문창에 입력하세요.</h3>
+        <input type="text" name="num">
+        <button type="submit"> 확인 </button>
+    </form>
+    <div>
+        <p>
+            {% if operList == None %}
+                <h5> 목록이 없습니다. </h5>
+            {% else %}
+                {% for oper in operList %}
+                    <p>{{oper.opername}} : {{oper.port}}</br></p>
+                {% endfor %}
+            {% endif %}
+        </p>
+    </div>
+    <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script type="text/javascript">
+    var data = [
+
+    ]
+    var current_url = data[0];
+    var current_name = "";
+    $( document ).ready(function() {
+      $.ajaxSettings.async = false;
+      data.forEach(function(_url){
+        $.get(_url, {
+        },function(jqXHR) {
+          console.log( "success" );
+          current_url = _url;
+          current_name = jqXHR.name;
+          $(".hide-on-med-and-down").append('<li><a href="#" onclick="change(\'' + _url + '\', \'' + jqXHR.name + '\')">' + jqXHR.name + '</a></li>');
+        },'json' /* xml, text, script, html */)
+        //.done(function(jqXHR) {
+        //  console.log( "success done" );
+        //})
+        .fail(function(jqXHR) {
+          console.log( "error" );
+        })
+        .always(function(jqXHR) {
+          console.log( "finished" );
+        });
+      })
+
+      change(current_url, current_name);
+    });
+
+    function change(url, name) {
+      $("#name").text(name)
+      current_url = url;
+    }
+
+    $('#download-button').click( function() {
+      action();
+    });
+
+    $("#speech").keypress(function(e) {
+      if (e.keyCode == 13){
+        action();
+      }
+    });
+
+    function action() {
+      var speech = $("#speech").val();
+      $.post(current_url, {
+        content: speech
+      },function(jqXHR) {
+        console.log( "success" );
+      },'json' /* xml, text, script, html */)
+      //.done(function(jqXHR) {
+      //  alert("second success" );
+      //})
+      .fail(function(jqXHR) {
+        console.log( "error" );
+      })
+      .always(function(jqXHR) {
+        console.log( "finished" );
+        $("#speech").val("");
+      });
+    }
+
+  </script>
+
+</body>
+</html>

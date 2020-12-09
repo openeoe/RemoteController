@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: johabhwi5
+spec:
+  type: NodePort
+  ports:
+    - name: grpc
+      port: 50055
+      targetPort: 50055
+      nodePort: 31841
+  selector:
+    app: johabhwi5
+

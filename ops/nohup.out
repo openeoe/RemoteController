@@ -1,0 +1,3659 @@
+ * Serving Flask app "operator" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+129.254.186.88 - - [14/May/2020 18:31:28] "[37mGET / HTTP/1.1[0m" 200 -
+129.254.186.88 - - [14/May/2020 18:31:29] "[37mGET / HTTP/1.1[0m" 200 -
+129.254.186.88 - - [14/May/2020 18:31:29] "[37mGET / HTTP/1.1[0m" 200 -
+[2020-05-14 18:31:30,380] ERROR in app: Exception on /calculate [POST]
+Traceback (most recent call last):
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "operator.py", line 32, in calculate
+    return redirect(url_for('inputTest',num=temp))
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/werkzeug/routing.py", line 2177, in build
+    rv = self._partial_build(endpoint, values, method, append_unknown)
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/werkzeug/routing.py", line 2067, in _partial_build
+    rv = rule.build(values, append_unknown)
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/werkzeug/routing.py", line 1038, in build
+    return self._build_unknown(**values)
+  File "<werkzeug routing>", line 1, in <builder:'/<int:num>'>
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/werkzeug/routing.py", line 1257, in to_url
+    value = self.num_convert(value)
+ValueError: invalid literal for int() with base 10: 'df'
+129.254.186.88 - - [14/May/2020 18:31:30] "[35m[1mPOST /calculate HTTP/1.1[0m" 500 -
+[2020-05-14 19:59:26,125] ERROR in app: Exception on /calculate [POST]
+Traceback (most recent call last):
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "operator.py", line 32, in calculate
+    return redirect(url_for('inputTest',num=temp))
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/werkzeug/routing.py", line 2177, in build
+    rv = self._partial_build(endpoint, values, method, append_unknown)
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/werkzeug/routing.py", line 2067, in _partial_build
+    rv = rule.build(values, append_unknown)
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/werkzeug/routing.py", line 1038, in build
+    return self._build_unknown(**values)
+  File "<werkzeug routing>", line 1, in <builder:'/<int:num>'>
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/werkzeug/routing.py", line 1257, in to_url
+    value = self.num_convert(value)
+ValueError: invalid literal for int() with base 10: 'df'
+129.254.186.88 - - [14/May/2020 19:59:26] "[35m[1mPOST /calculate HTTP/1.1[0m" 500 -
+129.254.186.88 - - [15/May/2020 13:06:45] "[37mGET / HTTP/1.1[0m" 200 -
+129.254.186.88 - - [15/May/2020 13:06:54] "[32mPOST /calculate HTTP/1.1[0m" 302 -
+129.254.186.88 - - [15/May/2020 13:06:54] "[37mGET /1 HTTP/1.1[0m" 200 -
+[2020-05-15 13:07:00,242] ERROR in app: Exception on /calculate [POST]
+Traceback (most recent call last):
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "operator.py", line 32, in calculate
+    return redirect(url_for('inputTest',num=temp))
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/flask/helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/werkzeug/routing.py", line 2177, in build
+    rv = self._partial_build(endpoint, values, method, append_unknown)
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/werkzeug/routing.py", line 2067, in _partial_build
+    rv = rule.build(values, append_unknown)
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/werkzeug/routing.py", line 1038, in build
+    return self._build_unknown(**values)
+  File "<werkzeug routing>", line 1, in <builder:'/<int:num>'>
+  File "/home/nanum/exoContainerGit/operator/venv/lib/python3.5/site-packages/werkzeug/routing.py", line 1257, in to_url
+    value = self.num_convert(value)
+ValueError: invalid literal for int() with base 10: 'ㅁ'
+129.254.186.88 - - [15/May/2020 13:07:00] "[35m[1mPOST /calculate HTTP/1.1[0m" 500 -
+129.254.186.88 - - [15/May/2020 13:07:04] "[32mPOST /calculate HTTP/1.1[0m" 302 -
+129.254.186.88 - - [15/May/2020 13:07:04] "[37mGET /3 HTTP/1.1[0m" 200 -
+129.254.186.88 - - [15/May/2020 13:07:12] "[32mPOST /calculate HTTP/1.1[0m" 302 -
+129.254.186.88 - - [15/May/2020 13:07:12] "[37mGET /3 HTTP/1.1[0m" 200 -
+INFO:operator:Processing default request
+ * Serving Flask app "operator" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 2716
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 14:23:19] "[37mGET /johab HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 14:23:19] "[33mGET /js/materialize.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 14:23:19] "[33mGET /js/init.js HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 2716
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 14:23:19] "[37mGET /combine HTTP/1.1[0m" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 2716
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 14:23:21] "[37mGET /johab HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 14:23:21] "[33mGET /js/materialize.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 14:23:21] "[33mGET /js/init.js HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 2716
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 14:23:21] "[37mGET /combine HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 14:23:23] "[37mPOST /result HTTP/1.1[0m" 200 -
+dict
+2
+grpc
+ 이름 : combine-law / 통신 포트 : 32385
+2
+grpc
+ 이름 : combine-test / 통신 포트 : 31673
+dict
+2
+grpc
+ 이름 : combine-law / 통신 포트 : 32385
+2
+grpc
+ 이름 : combine-test / 통신 포트 : 31673
+dict
+2
+grpc
+ 이름 : combine-law / 통신 포트 : 32385
+2
+grpc
+ 이름 : combine-test / 통신 포트 : 31673
+dict
+2
+grpc
+ 이름 : combine-law / 통신 포트 : 32385
+2
+grpc
+ 이름 : combine-test / 통신 포트 : 31673
+test Done
+received: ㅅㄷㄴㅅ{java MODULE2 output}
+test Done
+received: {
+"quizMetaData" : 
+	{
+	"strQOrigin" : "",
+	"strQRound" : "",
+	"uiNum" : 0,
+	"strQForm" : "",
+	"strQCat" : "",
+	"strQuestion" : "김영란법이뭐야?",
+	"mQOptions" : 
+	[
+	],
+	"mQCompOpts" :
+	[
+	],
+	"vQCompAnswerCands" : [],
+	"mQHints" :
+	[
+	]
+	},
+"orgQInfo" : 
+	{
+	"orgQUnit" : 
+		{
+		"strQuestion" : "김영란법이뭐야?",
+		"strTaggedQ" : "<CV_LAW:김영란법/NNP>+이/VCP+뭐/NP+이/VCP+야/EF+?/SF",
+		"ndoc" : 
+		{"doc_id" : "",
+ "DCT" : "",
+ "category" : "",
+ "category_weight" : 0,
+ "title" : {"text" : "", "NE" : ""},
+ "metaInfo" : { },
+ "paragraphInfo" : [
+ ], 
+ "sentence" : [
+	{
+	"id" : 0,
+	"reserve_str" : "",
+	"text" : "김영란법이뭐야?",
+	"morp" : [
+		{"id" : 0, "lemma" : "김영란법", "type" : "NNP", "position" : 0, "weight" : 0.6 },
+		{"id" : 1, "lemma" : "이", "type" : "VCP", "position" : 12, "weight" : 0.00359898 },
+		{"id" : 2, "lemma" : "뭐", "type" : "NP", "position" : 15, "weight" : 0 },
+		{"id" : 3, "lemma" : "이", "type" : "VCP", "position" : 18, "weight" : 0.0175768 },
+		{"id" : 4, "lemma" : "야", "type" : "EF", "position" : 18, "weight" : 0.212983 },
+		{"id" : 5, "lemma" : "?", "type" : "SF", "position" : 21, "weight" : 1 }
+	],
+	"morp_eval" : [
+		{"id" : 0, "result" : "김영란법/NNG+이/VCP+뭐/NP+이/VCP+야/EF+?/SF", "target" : "김영란법이뭐야?", "word_id" : 0, "m_begin" : 0, "m_end" : 5}
+	],
+	"WSD" : [
+		{"id" : 0, "text" : "김영란법", "type" : "NNP", "scode" : "00", "weight" : 0, "position" : 0, "begin" : 0, "end" : 0},
+		{"id" : 1, "text" : "이", "type" : "VCP", "scode" : "01", "weight" : 1, "position" : 12, "begin" : 1, "end" : 1},
+		{"id" : 2, "text" : "뭐", "type" : "NP", "scode" : "00", "weight" : 0, "position" : 15, "begin" : 2, "end" : 2},
+		{"id" : 3, "text" : "이", "type" : "VCP", "scode" : "01", "weight" : 1, "position" : 18, "begin" : 3, "end" : 3},
+		{"id" : 4, "text" : "야", "type" : "EF", "scode" : "00", "weight" : 1, "position" : 18, "begin" : 4, "end" : 4},
+		{"id" : 5, "text" : "?", "type" : "SF", "scode" : "00", "weight" : 1, "position" : 21, "begin" : 5, "end" : 5}
+	],
+	"word" : [
+		{"id" : 0, "text" : "김영란법이뭐야?", "type" : "", "begin" : 0, "end" : 5}
+	],
+	"NE" : [
+		{"id" : 0, "text" : "김영란법", "type" : "CV_LAW", "begin" : 0, "end" : 0, "weight" : 0.151935, "common_noun" : 0}
+	],
+	"chunk" : [
+	],
+	"dependency" : [
+		{"id" : 0, "text" : "김영란법이뭐야?", "head" : -1, "label" : "VNP", "mod" : [], "weight" : 0.623946 }
+	],
+	"phrase_dependency" : [
+		{"id" : 0, "label" : "VNP", "text" : "김영란법이뭐야?", "begin" : 0, "end" : 0, "key_begin" : 0, "head_phrase" : -1, "sub_phrase" : [], "weight" : 0, 
+			"element" : [
+				{ "text" : "김영란법이뭐", "label" : "NP", "begin" : 0, "end" : 2, "ne_type" : "" },
+				{ "text" : "야?", "label" : "VP", "begin" : 3, "end" : 5, "ne_type" : "" }
+			] }
+	],
+	"SRL" : [
+	],
+	"relation" : [
+	],
+	"SA" : [
+	],
+	"ZA" : [
+	]
+	}
+ ],
+ "entity" : [
+ ]
+}
+,
+		"vQTs" :
+		[
+			{
+			"qt" : 3,
+			"strQTClue" : "뭐",
+			"uiSentID" : 0,
+			"normQTClue" : {"id" : 2, "lemma" : "뭐", "type" : "NP", "position" : 15}
+			}
+		],
+		"vQFs" :
+		[
+			{
+			"strQF" : "뭐",
+			"uiSentID" : 0,
+			"dWeightQF" : 1,
+			"vQF_Morp" : 
+			[
+				{"id" : 2, "lemma" : "뭐", "type" : "NP", "position" : 15}
+			]
+			}
+		],
+		"vLATs" :
+		[
+		],
+		"vSATs" :
+		[
+			{
+			"atSAT" : 1801,
+			"strSAT" : "DS_DEFINITION",
+			"expanse_SAT" : [],
+			"dWeightSAT" : 0.68,
+			"dConfidenceSAT" : 0.68
+			}
+		],
+		"vSATRoots" :
+		[
+			{
+			"atSAT" : 1801,
+			"strSAT" : "DS_DEFINITION",
+			"expanse_SAT" : [],
+			"dWeightSAT" : 0.68,
+			"dConfidenceSAT" : 0.68
+			}
+		],
+		"vTitles" :
+		[
+			{
+			"strEntity" : "김영란법",
+			"uiSentID" : 0,
+			"atEntityType" : 818,
+			"strEntityType" : "CV_LAW",
+			"dWeightTitle" : 0.588492,
+			"vEntity_Morp" : 
+			[
+				{"id" : 0, "lemma" : "김영란법", "type" : "NNP", "position" : 0}
+			],
+			"vEntityInfo" : 
+			[
+				{
+				"strNormEntity" : "김영란법",
+				"strOrgEntityTitle" : "부정청탁_및_금품등_수수의_금지에_관한_법률",
+				"strID" : "1253956",
+				"strExplain" : "부정청탁 및 금품 등 수수의 금지에 관한 법률(약칭 청탁금지법)은 대한민국에서 부정부패를 방지하기 위해 국민권익위원장이던 김영란의 제안으로 만들어진 법률로, 제안자의 이름을 따서 흔히 '김영란법'이라는 별칭으로 불린다. 공무원이나 공공기관 임직원, 학교 교직원 등이 일정 규모 이상의 (식사대접 3만원,선물 5만원,경조사비 10만원)상당의 금품을 받으면 직무 관련성이 없더라도 처벌하는 것을 골자로 하고 있다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/%EB%B6%80%EC%A0%95%EC%B2%AD%ED%83%81_%EB%B0%8F_%EA%B8%88%ED%92%88%EB%93%B1_%EC%88%98%EC%88%98%EC%9D%98_%EA%B8%88%EC%A7%80%EC%97%90_%EA%B4%80%ED%95%9C_%EB%B2%95%EB%A5%A0",
+				"dWeightEn" : 0.462117
+				},
+				{
+				"strNormEntity" : "김영란법",
+				"strOrgEntityTitle" : "김영란법",
+				"strID" : "8112355",
+				"strExplain" : "공직자 등에 대한 부정 청탁 및 공직자 등의 금품 등의 수수(收受)를 금지하는 법률. 공직자 등의 공정한 직무 수행을 보장하고 공공 기관에 대한 국민의 신뢰를 확보하는 것을 목적으로 2016년 9월 28일에 시행되었다. 정식 명칭은 ‘부정 청탁 및 금품 등 수수의 금지에 관한 법률’이다.",
+				"strURL" : "https://opendict.korean.go.kr/search/searchResult?focus_name=query&query=김영란법",
+				"dWeightEn" : 0.0
+				}
+			]
+			}
+		],
+		"vQTopic" :
+		[
+			{
+			"strEntity" : "김영란법",
+			"uiSentID" : 0,
+			"atEntityType" : 818,
+			"strEntityType" : "CV_LAW",
+			"dWeightTitle" : 0.588492,
+			"vEntity_Morp" : 
+			[
+				{"id" : 0, "lemma" : "김영란법", "type" : "NNP", "position" : 0}
+			],
+			"vEntityInfo" : 
+			[
+				{
+				"strNormEntity" : "김영란법",
+				"strOrgEntityTitle" : "부정청탁_및_금품등_수수의_금지에_관한_법률",
+				"strID" : "1253956",
+				"strExplain" : "부정청탁 및 금품 등 수수의 금지에 관한 법률(약칭 청탁금지법)은 대한민국에서 부정부패를 방지하기 위해 국민권익위원장이던 김영란의 제안으로 만들어진 법률로, 제안자의 이름을 따서 흔히 '김영란법'이라는 별칭으로 불린다. 공무원이나 공공기관 임직원, 학교 교직원 등이 일정 규모 이상의 (식사대접 3만원,선물 5만원,경조사비 10만원)상당의 금품을 받으면 직무 관련성이 없더라도 처벌하는 것을 골자로 하고 있다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/%EB%B6%80%EC%A0%95%EC%B2%AD%ED%83%81_%EB%B0%8F_%EA%B8%88%ED%92%88%EB%93%B1_%EC%88%98%EC%88%98%EC%9D%98_%EA%B8%88%EC%A7%80%EC%97%90_%EA%B4%80%ED%95%9C_%EB%B2%95%EB%A5%A0",
+				"dWeightEn" : 0.462117
+				},
+				{
+				"strNormEntity" : "김영란법",
+				"strOrgEntityTitle" : "김영란법",
+				"strID" : "8112355",
+				"strExplain" : "공직자 등에 대한 부정 청탁 및 공직자 등의 금품 등의 수수(收受)를 금지하는 법률. 공직자 등의 공정한 직무 수행을 보장하고 공공 기관에 대한 국민의 신뢰를 확보하는 것을 목적으로 2016년 9월 28일에 시행되었다. 정식 명칭은 ‘부정 청탁 및 금품 등 수수의 금지에 관한 법률’이다.",
+				"strURL" : "https://opendict.korean.go.kr/search/searchResult?focus_name=query&query=김영란법",
+				"dWeightEn" : 0.0
+				}
+			]
+			}
+		],
+		"vQuotation" :
+		[
+		],
+		"spoInfo" : 
+		{
+			"topic" : 
+				{
+				"strEntity" : "김영란법",
+				"uiSentID" : 0,
+				"atEntityType" : 818,
+				"strEntityType" : "CV_LAW",
+				"dWeightTitle" : 0.372727,
+				"vEntity_Morp" : 
+				[
+					{"id" : 0, "lemma" : "김영란법", "type" : "NNP", "position" : 0}
+				],
+				"vEntityInfo" : 
+				[
+					{
+					"strNormEntity" : "김영란법",
+					"strOrgEntityTitle" : "부정청탁_및_금품등_수수의_금지에_관한_법률",
+					"strID" : "1253956",
+					"strExplain" : "부정청탁 및 금품 등 수수의 금지에 관한 법률(약칭 청탁금지법)은 대한민국에서 부정부패를 방지하기 위해 국민권익위원장이던 김영란의 제안으로 만들어진 법률로, 제안자의 이름을 따서 흔히 '김영란법'이라는 별칭으로 불린다. 공무원이나 공공기관 임직원, 학교 교직원 등이 일정 규모 이상의 (식사대접 3만원,선물 5만원,경조사비 10만원)상당의 금품을 받으면 직무 관련성이 없더라도 처벌하는 것을 골자로 하고 있다.",
+					"strURL" : "https://ko.wikipedia.org/wiki/%EB%B6%80%EC%A0%95%EC%B2%AD%ED%83%81_%EB%B0%8F_%EA%B8%88%ED%92%88%EB%93%B1_%EC%88%98%EC%88%98%EC%9D%98_%EA%B8%88%EC%A7%80%EC%97%90_%EA%B4%80%ED%95%9C_%EB%B2%95%EB%A5%A0",
+					"dWeightEn" : 0.462117
+					},
+					{
+					"strNormEntity" : "김영란법",
+					"strOrgEntityTitle" : "김영란법",
+					"strID" : "8112355",
+					"strExplain" : "공직자 등에 대한 부정 청탁 및 공직자 등의 금품 등의 수수(收受)를 금지하는 법률. 공직자 등의 공정한 직무 수행을 보장하고 공공 기관에 대한 국민의 신뢰를 확보하는 것을 목적으로 2016년 9월 28일에 시행되었다. 정식 명칭은 ‘부정 청탁 및 금품 등 수수의 금지에 관한 법률’이다.",
+					"strURL" : "https://opendict.korean.go.kr/search/searchResult?focus_name=query&query=김영란법",
+					"dWeightEn" : 0.0
+					}
+				]
+				},
+			"propClue" : 
+				{
+				"strInfo" : "",
+				"strMorpNEInfo" : "",
+				"vMorpInfo" : 
+				[
+				],
+				"vNEInfo" : 
+				[
+				]
+				},
+			"topic_Const" : 
+				{
+				"loc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"time" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"comparison" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"etc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					}
+				},
+			"ans_Const" : 
+				{
+				"loc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"time" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"comparison" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"etc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					}
+				},
+			"bIsComparison" : "FALSE"
+		},
+		"dIntegrativeConf" : 0.0
+		},
+	"qDecompType" : 3,
+	"strQDecompType" : "",
+	"vSubQRelation" : 
+	[
+	],
+	"vSubQInfo" : 
+	[
+	],
+	"dQH_Weight" : 0.0
+	},
+"QClassification" : 
+	{
+	"vQCType" : 
+	[
+	{
+	"qType4Chg" : 320,
+	"strQType4Chg" : "서술형-정의",
+	"dWeightCQT" : 0.68
+	}
+	]
+	}
+}
+||0||{}||0||{"faq_clause":[{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":1,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"e4b5595642d979e63dfa579b3d0d0a72","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"김영란법이 시행된 것은 언제인가요?","docID":"74003","contentNo":"제4장","enforcement":"1982","weight":13.322596,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":2,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"4a3ca12e31f41e91cc3923f4536ce142","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"김영란법은 언제 제정되었나요?","docID":"74002","contentNo":"제4장","enforcement":"1982","weight":10.937662,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":3,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"2de5fcf52c318df4ca65c4d36024168a","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"4대강이 뭐야?","docID":"39","contentNo":"제4장","enforcement":"1982","weight":6.471757,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"탈락","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":4,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"74da70130bdf0a7177084364886bb188","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"AKS 소수판별법이 판별하는 것은 뭐야?","docID":"174002","contentNo":"제4장","enforcement":"1982","weight":5.6664186,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":5,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"4f71566b8c4fd7be122ecd8ce1c027ab","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"퀘이커의 창시자 이름이 뭐야?","docID":"173002","contentNo":"제4장","enforcement":"1982","weight":5.5644827,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"}]}INFO:werkzeug:129.254.186.88 - - [18/May/2020 14:26:01] "[37mPOST /result HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 14:40:58] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 14:40:58] "[33mGET /js/materialize.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 14:40:58] "[33mGET /js/init.js HTTP/1.1[0m" 404 -
+INFO:operator:Processing default request
+ * Serving Flask app "operator" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 3940
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 14:43:25] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 14:43:25] "[33mGET /js/materialize.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 14:43:25] "[33mGET /js/init.js HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 3940
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 14:43:25] "[37mGET /combine HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 14:43:29] "[37mPOST /result HTTP/1.1[0m" 200 -
+dict
+2
+grpc
+ 이름 : combine-devcode / 통신 포트 : 31157
+2
+grpc
+ 이름 : combine-law / 통신 포트 : 32385
+2
+grpc
+ 이름 : combine-test / 통신 포트 : 31673
+dict
+2
+grpc
+ 이름 : combine-devcode / 통신 포트 : 31157
+2
+grpc
+ 이름 : combine-law / 통신 포트 : 32385
+2
+grpc
+ 이름 : combine-test / 통신 포트 : 31673
+test Done
+received: 213{java MODULE1 output}
+test Done
+received: {
+"quizMetaData" : 
+	{
+	"strQOrigin" : "",
+	"strQRound" : "",
+	"uiNum" : 0,
+	"strQForm" : "",
+	"strQCat" : "",
+	"strQuestion" : "123?",
+	"mQOptions" : 
+	[
+	],
+	"mQCompOpts" :
+	[
+	],
+	"vQCompAnswerCands" : [],
+	"mQHints" :
+	[
+	]
+	},
+"orgQInfo" : 
+	{
+	"orgQUnit" : 
+		{
+		"strQuestion" : "123?",
+		"strTaggedQ" : "<QT_OTHERS:123/SN>+?/SF",
+		"ndoc" : 
+		{"doc_id" : "",
+ "DCT" : "",
+ "category" : "",
+ "category_weight" : 0,
+ "title" : {"text" : "", "NE" : ""},
+ "metaInfo" : { },
+ "paragraphInfo" : [
+ ], 
+ "sentence" : [
+	{
+	"id" : 0,
+	"reserve_str" : "",
+	"text" : "123?",
+	"morp" : [
+		{"id" : 0, "lemma" : "123", "type" : "SN", "position" : 0, "weight" : 1 },
+		{"id" : 1, "lemma" : "?", "type" : "SF", "position" : 3, "weight" : 1 }
+	],
+	"morp_eval" : [
+		{"id" : 0, "result" : "123/SN+?/SF", "target" : "123?", "word_id" : 0, "m_begin" : 0, "m_end" : 1}
+	],
+	"WSD" : [
+		{"id" : 0, "text" : "123", "type" : "SN", "scode" : "00", "weight" : 1, "position" : 0, "begin" : 0, "end" : 0},
+		{"id" : 1, "text" : "?", "type" : "SF", "scode" : "00", "weight" : 1, "position" : 3, "begin" : 1, "end" : 1}
+	],
+	"word" : [
+		{"id" : 0, "text" : "123?", "type" : "", "begin" : 0, "end" : 1}
+	],
+	"NE" : [
+		{"id" : 0, "text" : "123", "type" : "QT_OTHERS", "begin" : 0, "end" : 0, "weight" : 0.178743, "common_noun" : 0}
+	],
+	"chunk" : [
+	],
+	"dependency" : [
+		{"id" : 0, "text" : "123?", "head" : -1, "label" : "NP", "mod" : [], "weight" : 0.699787 }
+	],
+	"phrase_dependency" : [
+		{"id" : 0, "label" : "NP", "text" : "123?", "begin" : 0, "end" : 0, "key_begin" : 0, "head_phrase" : -1, "sub_phrase" : [], "weight" : 0, "element" : [] }
+	],
+	"SRL" : [
+	],
+	"relation" : [
+	],
+	"SA" : [
+	],
+	"ZA" : [
+	]
+	}
+ ],
+ "entity" : [
+ ]
+}
+,
+		"vQTs" :
+		[
+			{
+			"qt" : 11,
+			"strQTClue" : "",
+			"uiSentID" : 0,
+			"normQTClue" : {"id" : -1, "lemma" : "", "type" : "", "position" : -1}
+			}
+		],
+		"vQFs" :
+		[
+		],
+		"vLATs" :
+		[
+		],
+		"vSATs" :
+		[
+			{
+			"atSAT" : 1801,
+			"strSAT" : "DS_DEFINITION",
+			"expanse_SAT" : [],
+			"dWeightSAT" : 0.68,
+			"dConfidenceSAT" : 0.68
+			}
+		],
+		"vSATRoots" :
+		[
+			{
+			"atSAT" : 1801,
+			"strSAT" : "DS_DEFINITION",
+			"expanse_SAT" : [],
+			"dWeightSAT" : 0.68,
+			"dConfidenceSAT" : 0.68
+			}
+		],
+		"vTitles" :
+		[
+			{
+			"strEntity" : "123",
+			"uiSentID" : 0,
+			"atEntityType" : 1100,
+			"strEntityType" : "QT_OTHERS",
+			"dWeightTitle" : 0.604764,
+			"vEntity_Morp" : 
+			[
+				{"id" : 0, "lemma" : "123", "type" : "SN", "position" : 0}
+			],
+			"vEntityInfo" : 
+			[
+				{
+				"strNormEntity" : "123",
+				"strOrgEntityTitle" : "로터스_1-2-3",
+				"strID" : "0072998",
+				"strExplain" : "로터스 1-2-3(Lotus 1-2-3)은 로터스 소프트웨어에서 어셈블리어로써 개발한 스프레드시트이다. 개발자는 비지칼크의 개발에 참여한 바 있던 미치 케이퍼(Mitch Kapor)이다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/%EB%A1%9C%ED%84%B0%EC%8A%A4_1-2-3",
+				"dWeightEn" : 0.462117
+				},
+				{
+				"strNormEntity" : "123",
+				"strOrgEntityTitle" : "123",
+				"strID" : "0014551",
+				"strExplain" : "123(백이십삼)은 122보다 크고 124보다 작은 자연수이다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/123",
+				"dWeightEn" : 0.379949
+				}
+			]
+			}
+		],
+		"vQTopic" :
+		[
+			{
+			"strEntity" : "123",
+			"uiSentID" : 0,
+			"atEntityType" : 1100,
+			"strEntityType" : "QT_OTHERS",
+			"dWeightTitle" : 0.604764,
+			"vEntity_Morp" : 
+			[
+				{"id" : 0, "lemma" : "123", "type" : "SN", "position" : 0}
+			],
+			"vEntityInfo" : 
+			[
+				{
+				"strNormEntity" : "123",
+				"strOrgEntityTitle" : "로터스_1-2-3",
+				"strID" : "0072998",
+				"strExplain" : "로터스 1-2-3(Lotus 1-2-3)은 로터스 소프트웨어에서 어셈블리어로써 개발한 스프레드시트이다. 개발자는 비지칼크의 개발에 참여한 바 있던 미치 케이퍼(Mitch Kapor)이다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/%EB%A1%9C%ED%84%B0%EC%8A%A4_1-2-3",
+				"dWeightEn" : 0.462117
+				},
+				{
+				"strNormEntity" : "123",
+				"strOrgEntityTitle" : "123",
+				"strID" : "0014551",
+				"strExplain" : "123(백이십삼)은 122보다 크고 124보다 작은 자연수이다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/123",
+				"dWeightEn" : 0.379949
+				}
+			]
+			}
+		],
+		"vQuotation" :
+		[
+		],
+		"spoInfo" : 
+		{
+			"topic" : 
+				{
+				"strEntity" : "123",
+				"uiSentID" : 0,
+				"atEntityType" : 1100,
+				"strEntityType" : "QT_OTHERS",
+				"dWeightTitle" : 0.625,
+				"vEntity_Morp" : 
+				[
+					{"id" : 0, "lemma" : "123", "type" : "SN", "position" : 0}
+				],
+				"vEntityInfo" : 
+				[
+					{
+					"strNormEntity" : "123",
+					"strOrgEntityTitle" : "로터스_1-2-3",
+					"strID" : "0072998",
+					"strExplain" : "로터스 1-2-3(Lotus 1-2-3)은 로터스 소프트웨어에서 어셈블리어로써 개발한 스프레드시트이다. 개발자는 비지칼크의 개발에 참여한 바 있던 미치 케이퍼(Mitch Kapor)이다.",
+					"strURL" : "https://ko.wikipedia.org/wiki/%EB%A1%9C%ED%84%B0%EC%8A%A4_1-2-3",
+					"dWeightEn" : 0.462117
+					},
+					{
+					"strNormEntity" : "123",
+					"strOrgEntityTitle" : "123",
+					"strID" : "0014551",
+					"strExplain" : "123(백이십삼)은 122보다 크고 124보다 작은 자연수이다.",
+					"strURL" : "https://ko.wikipedia.org/wiki/123",
+					"dWeightEn" : 0.379949
+					}
+				]
+				},
+			"propClue" : 
+				{
+				"strInfo" : "",
+				"strMorpNEInfo" : "",
+				"vMorpInfo" : 
+				[
+				],
+				"vNEInfo" : 
+				[
+				]
+				},
+			"topic_Const" : 
+				{
+				"loc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"time" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"comparison" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"etc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					}
+				},
+			"ans_Const" : 
+				{
+				"loc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"time" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"comparison" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"etc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					}
+				},
+			"bIsComparison" : "FALSE"
+		},
+		"dIntegrativeConf" : 0.0
+		},
+	"qDecompType" : 3,
+	"strQDecompType" : "",
+	"vSubQRelation" : 
+	[
+	],
+	"vSubQInfo" : 
+	[
+	],
+	"dQH_Weight" : 0.0
+	},
+"QClassification" : 
+	{
+	"vQCType" : 
+	[
+	{
+	"qType4Chg" : 320,
+	"strQType4Chg" : "서술형-정의",
+	"dWeightCQT" : 0.68
+	}
+	]
+	}
+}
+||0||{}||0||{"faq_clause":[{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":1,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"920f42912246af82d785af565c331ccc","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"2020 U-23 챔피언십에서 우승국은 어디인가?","docID":"36003","contentNo":"제4장","enforcement":"1982","weight":3.935433,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":2,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"aae405c952719a2c5dfa112146b5c5b0","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"1623년 인조반정을 주도하여 북인을 몰락시킨 세력은?","docID":"157002","contentNo":"제4장","enforcement":"1982","weight":3.813595,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":3,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"98c2777bc904b59e7e7bbce41f3ace66","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"옐로스톤 국립공원의 1283개의 간헐천 중 가장 유명한 것은?","docID":"151","contentNo":"제4장","enforcement":"1982","weight":3.1105115,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"부연설명(명사)","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":4,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"a491b9a15dfd30d9b861d017a1a38e10","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"1945년 12월 모스크바 3상회의의 결과인 신탁 통치에 반대하여 일어난 국민운동의 이름","docID":"160002","contentNo":"제4장","enforcement":"1982","weight":2.7032466,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":5,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"78c3d9aec972e1cf9691f980b095b8ee","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"싸이의 2012년 히트 곡의 이름은?","docID":"5001","contentNo":"제4장","enforcement":"1982","weight":2.7029598,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"}]}INFO:werkzeug:129.254.186.88 - - [18/May/2020 14:43:32] "[37mPOST /result HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 14:43:35] "[37mPOST /result HTTP/1.1[0m" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 1349
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:06:49] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:06:49] "[33mGET /js/materialize.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:06:49] "[33mGET /js/init.js HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 1349
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:06:49] "[37mGET /combine HTTP/1.1[0m" 200 -
+
+test Done
+received: 124124{java MODULE2 output}
+dict
+2
+grpc
+ 이름 : combine-law / 통신 포트 : 30877
+dict
+2
+grpc
+ 이름 : combine-law / 통신 포트 : 30877
+test Done
+received: {
+"quizMetaData" : 
+	{
+	"strQOrigin" : "",
+	"strQRound" : "",
+	"uiNum" : 0,
+	"strQForm" : "",
+	"strQCat" : "",
+	"strQuestion" : "안녕하세요?",
+	"mQOptions" : 
+	[
+	],
+	"mQCompOpts" :
+	[
+	],
+	"vQCompAnswerCands" : [],
+	"mQHints" :
+	[
+	]
+	},
+"orgQInfo" : 
+	{
+	"orgQUnit" : 
+		{
+		"strQuestion" : "안녕하세요?",
+		"strTaggedQ" : "안녕/NNG+하/XSA+세요/EF+?/SF",
+		"ndoc" : 
+		{"doc_id" : "",
+ "DCT" : "",
+ "category" : "",
+ "category_weight" : 0,
+ "title" : {"text" : "", "NE" : ""},
+ "metaInfo" : { },
+ "paragraphInfo" : [
+ ], 
+ "sentence" : [
+	{
+	"id" : 0,
+	"reserve_str" : "",
+	"text" : "안녕하세요?",
+	"morp" : [
+		{"id" : 0, "lemma" : "안녕", "type" : "NNG", "position" : 0, "weight" : 0.187449 },
+		{"id" : 1, "lemma" : "하", "type" : "XSA", "position" : 6, "weight" : 0.0001 },
+		{"id" : 2, "lemma" : "세요", "type" : "EF", "position" : 9, "weight" : 0.0513012 },
+		{"id" : 3, "lemma" : "?", "type" : "SF", "position" : 15, "weight" : 1 }
+	],
+	"morp_eval" : [
+		{"id" : 0, "result" : "안녕하/VA+세요/EF+?/SF", "target" : "안녕하세요?", "word_id" : 0, "m_begin" : 0, "m_end" : 3}
+	],
+	"WSD" : [
+		{"id" : 0, "text" : "안녕하", "type" : "VA", "scode" : "00", "weight" : 0, "position" : 0, "begin" : 0, "end" : 1},
+		{"id" : 1, "text" : "세요", "type" : "EF", "scode" : "00", "weight" : 1, "position" : 9, "begin" : 2, "end" : 2},
+		{"id" : 2, "text" : "?", "type" : "SF", "scode" : "00", "weight" : 1, "position" : 15, "begin" : 3, "end" : 3}
+	],
+	"word" : [
+		{"id" : 0, "text" : "안녕하세요?", "type" : "", "begin" : 0, "end" : 3}
+	],
+	"NE" : [
+	],
+	"chunk" : [
+	],
+	"dependency" : [
+		{"id" : 0, "text" : "안녕하세요?", "head" : -1, "label" : "VP", "mod" : [], "weight" : 0.771427 }
+	],
+	"phrase_dependency" : [
+		{"id" : 0, "label" : "VP", "text" : "안녕하세요?", "begin" : 0, "end" : 0, "key_begin" : 0, "head_phrase" : -1, "sub_phrase" : [], "weight" : 0, "element" : [] }
+	],
+	"SRL" : [
+		{"verb" : "안녕", "sense" : 1, "word_id" : 0, "weight" : 0,
+			"argument" : [
+			] }
+	],
+	"relation" : [
+	],
+	"SA" : [
+	],
+	"ZA" : [
+	]
+	}
+ ],
+ "entity" : [
+ ]
+}
+,
+		"vQTs" :
+		[
+			{
+			"qt" : 11,
+			"strQTClue" : "",
+			"uiSentID" : 0,
+			"normQTClue" : {"id" : -1, "lemma" : "", "type" : "", "position" : -1}
+			}
+		],
+		"vQFs" :
+		[
+		],
+		"vLATs" :
+		[
+		],
+		"vSATs" :
+		[
+			{
+			"atSAT" : 1801,
+			"strSAT" : "DS_DEFINITION",
+			"expanse_SAT" : [],
+			"dWeightSAT" : 0.68,
+			"dConfidenceSAT" : 0.68
+			}
+		],
+		"vSATRoots" :
+		[
+			{
+			"atSAT" : 1801,
+			"strSAT" : "DS_DEFINITION",
+			"expanse_SAT" : [],
+			"dWeightSAT" : 0.68,
+			"dConfidenceSAT" : 0.68
+			}
+		],
+		"vTitles" :
+		[
+			{
+			"strEntity" : "안녕하세요",
+			"uiSentID" : 0,
+			"atEntityType" : 0,
+			"strEntityType" : "AT_NOT",
+			"dWeightTitle" : 0.292085,
+			"vEntity_Morp" : 
+			[
+				{"id" : 0, "lemma" : "안녕", "type" : "NNG", "position" : 0},
+				{"id" : 1, "lemma" : "하", "type" : "XSA", "position" : 6},
+				{"id" : 2, "lemma" : "세요", "type" : "EF", "position" : 9}
+			],
+			"vEntityInfo" : 
+			[
+				{
+				"strNormEntity" : "안녕하세요",
+				"strOrgEntityTitle" : "안녕하세요(영화)",
+				"strID" : "0879576",
+				"strExplain" : "《안녕하세요》 (お早よう 오하요)는 오즈 야스지로가 감독한 1959년 일본의 코미디 영화이다. 감독의 1932년 무성 영화인 《태어나기는 했지만》의 리메이크 작품이다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94_%28%EC%98%81%ED%99%94%29",
+				"dWeightEn" : 0.462117
+				},
+				{
+				"strNormEntity" : "안녕하세요",
+				"strOrgEntityTitle" : "안녕하세요(드라마)",
+				"strID" : "0902794",
+				"strExplain" : "《안녕하세요》는 1981년 1월 10일부터 1981년 7월 12일까지 방영된 문화방송 주말연속극으로, 둘째 아들의 결혼으로 며느리의 동생들까지 한집에서 살면서 일어나는 에피소드를 코믹하게 엮은 홈 드라마다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94_%28%EB%93%9C%EB%9D%BC%EB%A7%88%29",
+				"dWeightEn" : 0.362108
+				}
+			]
+			}
+		],
+		"vQTopic" :
+		[
+			{
+			"strEntity" : "안녕하세요",
+			"uiSentID" : 0,
+			"atEntityType" : 0,
+			"strEntityType" : "AT_NOT",
+			"dWeightTitle" : 0.292085,
+			"vEntity_Morp" : 
+			[
+				{"id" : 0, "lemma" : "안녕", "type" : "NNG", "position" : 0},
+				{"id" : 1, "lemma" : "하", "type" : "XSA", "position" : 6},
+				{"id" : 2, "lemma" : "세요", "type" : "EF", "position" : 9}
+			],
+			"vEntityInfo" : 
+			[
+				{
+				"strNormEntity" : "안녕하세요",
+				"strOrgEntityTitle" : "안녕하세요(영화)",
+				"strID" : "0879576",
+				"strExplain" : "《안녕하세요》 (お早よう 오하요)는 오즈 야스지로가 감독한 1959년 일본의 코미디 영화이다. 감독의 1932년 무성 영화인 《태어나기는 했지만》의 리메이크 작품이다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94_%28%EC%98%81%ED%99%94%29",
+				"dWeightEn" : 0.462117
+				},
+				{
+				"strNormEntity" : "안녕하세요",
+				"strOrgEntityTitle" : "안녕하세요(드라마)",
+				"strID" : "0902794",
+				"strExplain" : "《안녕하세요》는 1981년 1월 10일부터 1981년 7월 12일까지 방영된 문화방송 주말연속극으로, 둘째 아들의 결혼으로 며느리의 동생들까지 한집에서 살면서 일어나는 에피소드를 코믹하게 엮은 홈 드라마다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94_%28%EB%93%9C%EB%9D%BC%EB%A7%88%29",
+				"dWeightEn" : 0.362108
+				}
+			]
+			}
+		],
+		"vQuotation" :
+		[
+		],
+		"spoInfo" : 
+		{
+			"topic" : 
+				{
+				"strEntity" : "안녕하세요",
+				"uiSentID" : 0,
+				"atEntityType" : 0,
+				"strEntityType" : "AT_NOT",
+				"dWeightTitle" : 0.84375,
+				"vEntity_Morp" : 
+				[
+					{"id" : 0, "lemma" : "안녕", "type" : "NNG", "position" : 0},
+					{"id" : 1, "lemma" : "하", "type" : "XSA", "position" : 6},
+					{"id" : 2, "lemma" : "세요", "type" : "EF", "position" : 9}
+				],
+				"vEntityInfo" : 
+				[
+					{
+					"strNormEntity" : "안녕하세요",
+					"strOrgEntityTitle" : "안녕하세요(영화)",
+					"strID" : "0879576",
+					"strExplain" : "《안녕하세요》 (お早よう 오하요)는 오즈 야스지로가 감독한 1959년 일본의 코미디 영화이다. 감독의 1932년 무성 영화인 《태어나기는 했지만》의 리메이크 작품이다.",
+					"strURL" : "https://ko.wikipedia.org/wiki/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94_%28%EC%98%81%ED%99%94%29",
+					"dWeightEn" : 0.462117
+					},
+					{
+					"strNormEntity" : "안녕하세요",
+					"strOrgEntityTitle" : "안녕하세요(드라마)",
+					"strID" : "0902794",
+					"strExplain" : "《안녕하세요》는 1981년 1월 10일부터 1981년 7월 12일까지 방영된 문화방송 주말연속극으로, 둘째 아들의 결혼으로 며느리의 동생들까지 한집에서 살면서 일어나는 에피소드를 코믹하게 엮은 홈 드라마다.",
+					"strURL" : "https://ko.wikipedia.org/wiki/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94_%28%EB%93%9C%EB%9D%BC%EB%A7%88%29",
+					"dWeightEn" : 0.362108
+					}
+				]
+				},
+			"propClue" : 
+				{
+				"strInfo" : "",
+				"strMorpNEInfo" : "",
+				"vMorpInfo" : 
+				[
+				],
+				"vNEInfo" : 
+				[
+				]
+				},
+			"topic_Const" : 
+				{
+				"loc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"time" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"comparison" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"etc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					}
+				},
+			"ans_Const" : 
+				{
+				"loc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"time" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"comparison" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"etc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					}
+				},
+			"bIsComparison" : "FALSE"
+		},
+		"dIntegrativeConf" : 0.0
+		},
+	"qDecompType" : 3,
+	"strQDecompType" : "",
+	"vSubQRelation" : 
+	[
+	],
+	"vSubQInfo" : 
+	[
+	],
+	"dQH_Weight" : 0.0
+	},
+"QClassification" : 
+	{
+	"vQCType" : 
+	[
+	{
+	"qType4Chg" : 320,
+	"strQType4Chg" : "서술형-정의",
+	"dWeightCQT" : 0.68
+	}
+	]
+	}
+}
+||0||{}||0||{"faq_clause":[{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":1,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"9031805bb9592dad9ff58c76452c7e32","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"간접세의 예시를 알려주세요.","docID":"56001","contentNo":"제4장","enforcement":"1982","weight":3.0318754,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":2,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"bb3c2a4fd5016269782eeb4c6a6789d7","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"자폐증 증상에 대해서 알려주세요.","docID":"43002","contentNo":"제4장","enforcement":"1982","weight":2.925455,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":3,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"4578f0bce29884fcd205f0139c45da8b","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"유럽연합 나라 이름좀 알려주세요.","docID":"45002","contentNo":"제4장","enforcement":"1982","weight":2.925455,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":4,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"c4937088d6416ef6c58de3b2aaf91a2d","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"상하이의 대표 음식을 알려주세요.","docID":"115","contentNo":"제4장","enforcement":"1982","weight":2.925455,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"유의어","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":5,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"cd5c6d03fa69e4cad133a4da8c62be04","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"한국의 대표적 음식을 알려주세요.","docID":"115002","contentNo":"제4장","enforcement":"1982","weight":2.925455,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"}]}INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:06:53] "[37mPOST /result HTTP/1.1[0m" 200 -
+
+test Done
+received: {
+"quizMetaData" : 
+	{
+	"strQOrigin" : "",
+	"strQRound" : "",
+	"uiNum" : 0,
+	"strQForm" : "",
+	"strQCat" : "",
+	"strQuestion" : "결과입니다?",
+	"mQOptions" : 
+	[
+	],
+	"mQCompOpts" :
+	[
+	],
+	"vQCompAnswerCands" : [],
+	"mQHints" :
+	[
+	]
+	},
+"orgQInfo" : 
+	{
+	"orgQUnit" : 
+		{
+		"strQuestion" : "결과입니다?",
+		"strTaggedQ" : "결과/NNG+이/VCP+ㅂ니다/EF+?/SF",
+		"ndoc" : 
+		{"doc_id" : "",
+ "DCT" : "",
+ "category" : "",
+ "category_weight" : 0,
+ "title" : {"text" : "", "NE" : ""},
+ "metaInfo" : { },
+ "paragraphInfo" : [
+ ], 
+ "sentence" : [
+	{
+	"id" : 0,
+	"reserve_str" : "",
+	"text" : "결과입니다?",
+	"morp" : [
+		{"id" : 0, "lemma" : "결과", "type" : "NNG", "position" : 0, "weight" : 0.9 },
+		{"id" : 1, "lemma" : "이", "type" : "VCP", "position" : 6, "weight" : 0.0177525 },
+		{"id" : 2, "lemma" : "ㅂ니다", "type" : "EF", "position" : 6, "weight" : 0.36174 },
+		{"id" : 3, "lemma" : "?", "type" : "SF", "position" : 15, "weight" : 1 }
+	],
+	"morp_eval" : [
+		{"id" : 0, "result" : "결과/NNG+이/VCP+ㅂ니다/EF+?/SF", "target" : "결과입니다?", "word_id" : 0, "m_begin" : 0, "m_end" : 3}
+	],
+	"WSD" : [
+		{"id" : 0, "text" : "결과", "type" : "NNG", "scode" : "02", "weight" : 1, "position" : 0, "begin" : 0, "end" : 0},
+		{"id" : 1, "text" : "이", "type" : "VCP", "scode" : "01", "weight" : 1, "position" : 6, "begin" : 1, "end" : 1},
+		{"id" : 2, "text" : "ㅂ니다", "type" : "EF", "scode" : "00", "weight" : 1, "position" : 6, "begin" : 2, "end" : 2},
+		{"id" : 3, "text" : "?", "type" : "SF", "scode" : "00", "weight" : 1, "position" : 15, "begin" : 3, "end" : 3}
+	],
+	"word" : [
+		{"id" : 0, "text" : "결과입니다?", "type" : "", "begin" : 0, "end" : 3}
+	],
+	"NE" : [
+	],
+	"chunk" : [
+	],
+	"dependency" : [
+		{"id" : 0, "text" : "결과입니다?", "head" : -1, "label" : "VNP", "mod" : [], "weight" : 0.685663 }
+	],
+	"phrase_dependency" : [
+		{"id" : 0, "label" : "VNP", "text" : "결과입니다?", "begin" : 0, "end" : 0, "key_begin" : 0, "head_phrase" : -1, "sub_phrase" : [], "weight" : 0, 
+			"element" : [
+				{ "text" : "결과", "label" : "NP", "begin" : 0, "end" : 0, "ne_type" : "" },
+				{ "text" : "입니다?", "label" : "VP", "begin" : 1, "end" : 3, "ne_type" : "" }
+			] }
+	],
+	"SRL" : [
+	],
+	"relation" : [
+	],
+	"SA" : [
+	],
+	"ZA" : [
+	]
+	}
+ ],
+ "entity" : [
+ ]
+}
+,
+		"vQTs" :
+		[
+			{
+			"qt" : 11,
+			"strQTClue" : "",
+			"uiSentID" : 0,
+			"normQTClue" : {"id" : -1, "lemma" : "", "type" : "", "position" : -1}
+			}
+		],
+		"vQFs" :
+		[
+		],
+		"vLATs" :
+		[
+		],
+		"vSATs" :
+		[
+			{
+			"atSAT" : 1114,
+			"strSAT" : "QT_SPORTS",
+			"expanse_SAT" : [],
+			"dWeightSAT" : 0.580116,
+			"dConfidenceSAT" : 0.0
+			}
+		],
+		"vSATRoots" :
+		[
+			{
+			"atSAT" : 1114,
+			"strSAT" : "QT_SPORTS",
+			"expanse_SAT" : [],
+			"dWeightSAT" : 0.580116,
+			"dConfidenceSAT" : 0.0
+			}
+		],
+		"vTitles" :
+		[
+		],
+		"vQTopic" :
+		[
+		],
+		"vQuotation" :
+		[
+		],
+		"spoInfo" : 
+		{
+			"topic" : 
+				{
+				"strEntity" : "",
+				"uiSentID" : 0,
+				"atEntityType" : 0,
+				"strEntityType" : "",
+				"dWeightTitle" : 0.0,
+				"vEntity_Morp" : 
+				[
+				],
+				"vEntityInfo" : 
+				[
+				]
+				},
+			"propClue" : 
+				{
+				"strInfo" : "",
+				"strMorpNEInfo" : "",
+				"vMorpInfo" : 
+				[
+				],
+				"vNEInfo" : 
+				[
+				]
+				},
+			"topic_Const" : 
+				{
+				"loc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"time" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"comparison" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"etc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					}
+				},
+			"ans_Const" : 
+				{
+				"loc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"time" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"comparison" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"etc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					}
+				},
+			"bIsComparison" : "FALSE"
+		},
+		"dIntegrativeConf" : 0.0
+		},
+	"qDecompType" : 3,
+	"strQDecompType" : "",
+	"vSubQRelation" : 
+	[
+	],
+	"vSubQInfo" : 
+	[
+	],
+	"dQH_Weight" : 0.0
+	},
+"QClassification" : 
+	{
+	"vQCType" : 
+	[
+	{
+	"qType4Chg" : 100,
+	"strQType4Chg" : "단답형",
+	"dWeightCQT" : 0.810793
+	}
+	]
+	}
+}
+||0||{}||0||{"faq_clause":[{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":1,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"bef1383a18749f9417199b7848396cf7","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"폴킴의 국적이 궁금합니다.","docID":"44002","contentNo":"제4장","enforcement":"1982","weight":3.5098226,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":2,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"1501e980ee44cc085728d6331fb56c2f","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"G20 국가가 궁금합니다.","docID":"45","contentNo":"제4장","enforcement":"1982","weight":3.5098226,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"다른표현(명사)","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":3,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"57f26de81eaaafa34fb69bd1c0b1887b","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"보스턴 차 사건의 결과는?","docID":"99001","contentNo":"제4장","enforcement":"1982","weight":3.4507809,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":4,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"65f91bb800582f35dad17b9c00636235","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"2.8 독립 선언의 결과는?","docID":"34001","contentNo":"제4장","enforcement":"1982","weight":3.352708,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":5,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"df6a50d38cd2228824451760a1ecea9c","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"공황장애의 치료법이 궁금합니다.","docID":"43003","contentNo":"제4장","enforcement":"1982","weight":3.3126433,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"}]}INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:07:02] "[37mPOST /result HTTP/1.1[0m" 200 -
+
+test Done
+received: {
+"quizMetaData" : 
+	{
+	"strQOrigin" : "",
+	"strQRound" : "",
+	"uiNum" : 0,
+	"strQForm" : "",
+	"strQCat" : "",
+	"strQuestion" : "김영란법이 뭐야?",
+	"mQOptions" : 
+	[
+	],
+	"mQCompOpts" :
+	[
+	],
+	"vQCompAnswerCands" : [],
+	"mQHints" :
+	[
+	]
+	},
+"orgQInfo" : 
+	{
+	"orgQUnit" : 
+		{
+		"strQuestion" : "김영란법이 뭐야?",
+		"strTaggedQ" : "<CV_LAW:김영란법/NNP>+이/JKS 뭐/NP+이/VCP+야/EF+?/SF",
+		"ndoc" : 
+		{"doc_id" : "",
+ "DCT" : "",
+ "category" : "",
+ "category_weight" : 0,
+ "title" : {"text" : "", "NE" : ""},
+ "metaInfo" : { },
+ "paragraphInfo" : [
+ ], 
+ "sentence" : [
+	{
+	"id" : 0,
+	"reserve_str" : "",
+	"text" : "김영란법이 뭐야?",
+	"morp" : [
+		{"id" : 0, "lemma" : "김영란법", "type" : "NNP", "position" : 0, "weight" : 0.6 },
+		{"id" : 1, "lemma" : "이", "type" : "JKS", "position" : 12, "weight" : 0.0234517 },
+		{"id" : 2, "lemma" : "뭐", "type" : "NP", "position" : 16, "weight" : 0.0245792 },
+		{"id" : 3, "lemma" : "이", "type" : "VCP", "position" : 19, "weight" : 0.0175768 },
+		{"id" : 4, "lemma" : "야", "type" : "EF", "position" : 19, "weight" : 0.212983 },
+		{"id" : 5, "lemma" : "?", "type" : "SF", "position" : 22, "weight" : 1 }
+	],
+	"morp_eval" : [
+		{"id" : 0, "result" : "김영란법/NNG+이/JKS", "target" : "김영란법이", "word_id" : 0, "m_begin" : 0, "m_end" : 1},
+		{"id" : 1, "result" : "뭐/NP+이/VCP+야/EF+?/SF", "target" : "뭐야?", "word_id" : 1, "m_begin" : 2, "m_end" : 5}
+	],
+	"WSD" : [
+		{"id" : 0, "text" : "김영란법", "type" : "NNP", "scode" : "00", "weight" : 0, "position" : 0, "begin" : 0, "end" : 0},
+		{"id" : 1, "text" : "이", "type" : "JKS", "scode" : "00", "weight" : 1, "position" : 12, "begin" : 1, "end" : 1},
+		{"id" : 2, "text" : "뭐", "type" : "NP", "scode" : "00", "weight" : 0, "position" : 16, "begin" : 2, "end" : 2},
+		{"id" : 3, "text" : "이", "type" : "VCP", "scode" : "01", "weight" : 1, "position" : 19, "begin" : 3, "end" : 3},
+		{"id" : 4, "text" : "야", "type" : "EF", "scode" : "00", "weight" : 1, "position" : 19, "begin" : 4, "end" : 4},
+		{"id" : 5, "text" : "?", "type" : "SF", "scode" : "00", "weight" : 1, "position" : 22, "begin" : 5, "end" : 5}
+	],
+	"word" : [
+		{"id" : 0, "text" : "김영란법이", "type" : "", "begin" : 0, "end" : 1},
+		{"id" : 1, "text" : "뭐야?", "type" : "", "begin" : 2, "end" : 5}
+	],
+	"NE" : [
+		{"id" : 0, "text" : "김영란법", "type" : "CV_LAW", "begin" : 0, "end" : 0, "weight" : 0.172433, "common_noun" : 0}
+	],
+	"chunk" : [
+	],
+	"dependency" : [
+		{"id" : 0, "text" : "김영란법이", "head" : 1, "label" : "NP_SBJ", "mod" : [], "weight" : 0.631325 },
+		{"id" : 1, "text" : "뭐야?", "head" : -1, "label" : "VNP", "mod" : [0], "weight" : 0.495243 }
+	],
+	"phrase_dependency" : [
+		{"id" : 0, "label" : "NP_SBJ", "text" : "김영란법이", "begin" : 0, "end" : 0, "key_begin" : 0, "head_phrase" : 1, "sub_phrase" : [], "weight" : 0, "element" : [] },
+		{"id" : 1, "label" : "S", "text" : "P#0@SBJ이 뭐야?", "begin" : 0, "end" : 1, "key_begin" : 1, "head_phrase" : -1, "sub_phrase" : [0], "weight" : 0, 
+			"element" : [
+				{ "text" : "뭐", "label" : "NP", "begin" : 2, "end" : 2, "ne_type" : "" },
+				{ "text" : "야?", "label" : "VP", "begin" : 3, "end" : 5, "ne_type" : "" }
+			] }
+	],
+	"SRL" : [
+	],
+	"relation" : [
+	],
+	"SA" : [
+	],
+	"ZA" : [
+	]
+	}
+ ],
+ "entity" : [
+ ]
+}
+,
+		"vQTs" :
+		[
+			{
+			"qt" : 3,
+			"strQTClue" : "뭐",
+			"uiSentID" : 0,
+			"normQTClue" : {"id" : 2, "lemma" : "뭐", "type" : "NP", "position" : 16}
+			}
+		],
+		"vQFs" :
+		[
+			{
+			"strQF" : "뭐",
+			"uiSentID" : 0,
+			"dWeightQF" : 1,
+			"vQF_Morp" : 
+			[
+				{"id" : 2, "lemma" : "뭐", "type" : "NP", "position" : 16}
+			]
+			}
+		],
+		"vLATs" :
+		[
+		],
+		"vSATs" :
+		[
+			{
+			"atSAT" : 1801,
+			"strSAT" : "DS_DEFINITION",
+			"expanse_SAT" : [],
+			"dWeightSAT" : 0.68,
+			"dConfidenceSAT" : 0.68
+			}
+		],
+		"vSATRoots" :
+		[
+			{
+			"atSAT" : 1801,
+			"strSAT" : "DS_DEFINITION",
+			"expanse_SAT" : [],
+			"dWeightSAT" : 0.68,
+			"dConfidenceSAT" : 0.68
+			}
+		],
+		"vTitles" :
+		[
+			{
+			"strEntity" : "김영란법",
+			"uiSentID" : 0,
+			"atEntityType" : 818,
+			"strEntityType" : "CV_LAW",
+			"dWeightTitle" : 0.650026,
+			"vEntity_Morp" : 
+			[
+				{"id" : 0, "lemma" : "김영란법", "type" : "NNP", "position" : 0}
+			],
+			"vEntityInfo" : 
+			[
+				{
+				"strNormEntity" : "김영란법",
+				"strOrgEntityTitle" : "부정청탁_및_금품등_수수의_금지에_관한_법률",
+				"strID" : "1253956",
+				"strExplain" : "부정청탁 및 금품 등 수수의 금지에 관한 법률(약칭 청탁금지법)은 대한민국에서 부정부패를 방지하기 위해 국민권익위원장이던 김영란의 제안으로 만들어진 법률로, 제안자의 이름을 따서 흔히 '김영란법'이라는 별칭으로 불린다. 공무원이나 공공기관 임직원, 학교 교직원 등이 일정 규모 이상의 (식사대접 3만원,선물 5만원,경조사비 10만원)상당의 금품을 받으면 직무 관련성이 없더라도 처벌하는 것을 골자로 하고 있다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/%EB%B6%80%EC%A0%95%EC%B2%AD%ED%83%81_%EB%B0%8F_%EA%B8%88%ED%92%88%EB%93%B1_%EC%88%98%EC%88%98%EC%9D%98_%EA%B8%88%EC%A7%80%EC%97%90_%EA%B4%80%ED%95%9C_%EB%B2%95%EB%A5%A0",
+				"dWeightEn" : 0.462117
+				},
+				{
+				"strNormEntity" : "김영란법",
+				"strOrgEntityTitle" : "김영란법",
+				"strID" : "8112355",
+				"strExplain" : "공직자 등에 대한 부정 청탁 및 공직자 등의 금품 등의 수수(收受)를 금지하는 법률. 공직자 등의 공정한 직무 수행을 보장하고 공공 기관에 대한 국민의 신뢰를 확보하는 것을 목적으로 2016년 9월 28일에 시행되었다. 정식 명칭은 ‘부정 청탁 및 금품 등 수수의 금지에 관한 법률’이다.",
+				"strURL" : "https://opendict.korean.go.kr/search/searchResult?focus_name=query&query=김영란법",
+				"dWeightEn" : 0.0
+				}
+			]
+			}
+		],
+		"vQTopic" :
+		[
+			{
+			"strEntity" : "김영란법",
+			"uiSentID" : 0,
+			"atEntityType" : 818,
+			"strEntityType" : "CV_LAW",
+			"dWeightTitle" : 0.650026,
+			"vEntity_Morp" : 
+			[
+				{"id" : 0, "lemma" : "김영란법", "type" : "NNP", "position" : 0}
+			],
+			"vEntityInfo" : 
+			[
+				{
+				"strNormEntity" : "김영란법",
+				"strOrgEntityTitle" : "부정청탁_및_금품등_수수의_금지에_관한_법률",
+				"strID" : "1253956",
+				"strExplain" : "부정청탁 및 금품 등 수수의 금지에 관한 법률(약칭 청탁금지법)은 대한민국에서 부정부패를 방지하기 위해 국민권익위원장이던 김영란의 제안으로 만들어진 법률로, 제안자의 이름을 따서 흔히 '김영란법'이라는 별칭으로 불린다. 공무원이나 공공기관 임직원, 학교 교직원 등이 일정 규모 이상의 (식사대접 3만원,선물 5만원,경조사비 10만원)상당의 금품을 받으면 직무 관련성이 없더라도 처벌하는 것을 골자로 하고 있다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/%EB%B6%80%EC%A0%95%EC%B2%AD%ED%83%81_%EB%B0%8F_%EA%B8%88%ED%92%88%EB%93%B1_%EC%88%98%EC%88%98%EC%9D%98_%EA%B8%88%EC%A7%80%EC%97%90_%EA%B4%80%ED%95%9C_%EB%B2%95%EB%A5%A0",
+				"dWeightEn" : 0.462117
+				},
+				{
+				"strNormEntity" : "김영란법",
+				"strOrgEntityTitle" : "김영란법",
+				"strID" : "8112355",
+				"strExplain" : "공직자 등에 대한 부정 청탁 및 공직자 등의 금품 등의 수수(收受)를 금지하는 법률. 공직자 등의 공정한 직무 수행을 보장하고 공공 기관에 대한 국민의 신뢰를 확보하는 것을 목적으로 2016년 9월 28일에 시행되었다. 정식 명칭은 ‘부정 청탁 및 금품 등 수수의 금지에 관한 법률’이다.",
+				"strURL" : "https://opendict.korean.go.kr/search/searchResult?focus_name=query&query=김영란법",
+				"dWeightEn" : 0.0
+				}
+			]
+			}
+		],
+		"vQuotation" :
+		[
+		],
+		"spoInfo" : 
+		{
+			"topic" : 
+				{
+				"strEntity" : "김영란법",
+				"uiSentID" : 0,
+				"atEntityType" : 818,
+				"strEntityType" : "CV_LAW",
+				"dWeightTitle" : 0.372727,
+				"vEntity_Morp" : 
+				[
+					{"id" : 0, "lemma" : "김영란법", "type" : "NNP", "position" : 0}
+				],
+				"vEntityInfo" : 
+				[
+					{
+					"strNormEntity" : "김영란법",
+					"strOrgEntityTitle" : "부정청탁_및_금품등_수수의_금지에_관한_법률",
+					"strID" : "1253956",
+					"strExplain" : "부정청탁 및 금품 등 수수의 금지에 관한 법률(약칭 청탁금지법)은 대한민국에서 부정부패를 방지하기 위해 국민권익위원장이던 김영란의 제안으로 만들어진 법률로, 제안자의 이름을 따서 흔히 '김영란법'이라는 별칭으로 불린다. 공무원이나 공공기관 임직원, 학교 교직원 등이 일정 규모 이상의 (식사대접 3만원,선물 5만원,경조사비 10만원)상당의 금품을 받으면 직무 관련성이 없더라도 처벌하는 것을 골자로 하고 있다.",
+					"strURL" : "https://ko.wikipedia.org/wiki/%EB%B6%80%EC%A0%95%EC%B2%AD%ED%83%81_%EB%B0%8F_%EA%B8%88%ED%92%88%EB%93%B1_%EC%88%98%EC%88%98%EC%9D%98_%EA%B8%88%EC%A7%80%EC%97%90_%EA%B4%80%ED%95%9C_%EB%B2%95%EB%A5%A0",
+					"dWeightEn" : 0.462117
+					},
+					{
+					"strNormEntity" : "김영란법",
+					"strOrgEntityTitle" : "김영란법",
+					"strID" : "8112355",
+					"strExplain" : "공직자 등에 대한 부정 청탁 및 공직자 등의 금품 등의 수수(收受)를 금지하는 법률. 공직자 등의 공정한 직무 수행을 보장하고 공공 기관에 대한 국민의 신뢰를 확보하는 것을 목적으로 2016년 9월 28일에 시행되었다. 정식 명칭은 ‘부정 청탁 및 금품 등 수수의 금지에 관한 법률’이다.",
+					"strURL" : "https://opendict.korean.go.kr/search/searchResult?focus_name=query&query=김영란법",
+					"dWeightEn" : 0.0
+					}
+				]
+				},
+			"propClue" : 
+				{
+				"strInfo" : "뭐",
+				"strMorpNEInfo" : "뭐",
+				"vMorpInfo" : 
+				[
+					{"id" : 2, "lemma" : "뭐", "type" : "NP", "position" : 16}
+				],
+				"vNEInfo" : 
+				[
+				]
+				},
+			"topic_Const" : 
+				{
+				"loc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"time" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"comparison" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"etc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					}
+				},
+			"ans_Const" : 
+				{
+				"loc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"time" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"comparison" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"etc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					}
+				},
+			"bIsComparison" : "FALSE"
+		},
+		"dIntegrativeConf" : 0.0
+		},
+	"qDecompType" : 3,
+	"strQDecompType" : "",
+	"vSubQRelation" : 
+	[
+	],
+	"vSubQInfo" : 
+	[
+	],
+	"dQH_Weight" : 0.0
+	},
+"QClassification" : 
+	{
+	"vQCType" : 
+	[
+	{
+	"qType4Chg" : 320,
+	"strQType4Chg" : "서술형-정의",
+	"dWeightCQT" : 0.68
+	}
+	]
+	}
+}
+||0||{}||0||{"faq_clause":[{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":1,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"e4b5595642d979e63dfa579b3d0d0a72","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"김영란법이 시행된 것은 언제인가요?","docID":"74003","contentNo":"제4장","enforcement":"1982","weight":13.322596,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":2,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"4a3ca12e31f41e91cc3923f4536ce142","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"김영란법은 언제 제정되었나요?","docID":"74002","contentNo":"제4장","enforcement":"1982","weight":10.937662,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":3,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"2de5fcf52c318df4ca65c4d36024168a","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"4대강이 뭐야?","docID":"39","contentNo":"제4장","enforcement":"1982","weight":6.471757,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"탈락","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":4,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"74da70130bdf0a7177084364886bb188","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"AKS 소수판별법이 판별하는 것은 뭐야?","docID":"174002","contentNo":"제4장","enforcement":"1982","weight":5.6664186,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":5,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"4f71566b8c4fd7be122ecd8ce1c027ab","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"퀘이커의 창시자 이름이 뭐야?","docID":"173002","contentNo":"제4장","enforcement":"1982","weight":5.5644827,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"}]}INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:07:14] "[37mPOST /result HTTP/1.1[0m" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 2573
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:08:17] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:08:17] "[33mGET /js/materialize.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:08:17] "[33mGET /js/init.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:08:17] "[33mGET /js/init.js HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 2573
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:08:17] "[37mGET /combine HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:08:20] "[37mPOST /result HTTP/1.1[0m" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 1349
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:56:06] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:56:06] "[33mGET /js/materialize.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:56:06] "[33mGET /js/init.js HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 1349
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:56:06] "[37mGET /combine HTTP/1.1[0m" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 1349
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:57:01] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:57:02] "[33mGET /js/materialize.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:57:02] "[33mGET /js/init.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:57:02] "[33mGET /js/init.js HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 1349
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:57:02] "[37mGET /combine HTTP/1.1[0m" 200 -
+
+dict
+2
+grpc
+ 이름 : combine-devcode / 통신 포트 : 30614
+2
+grpc
+ 이름 : combine-law / 통신 포트 : 30877
+dict
+2
+grpc
+ 이름 : combine-devcode / 통신 포트 : 30614
+2
+grpc
+ 이름 : combine-law / 통신 포트 : 30877
+test Done
+received: 123{java MODULE1 output}
+dict
+2
+grpc
+ 이름 : combine-law / 통신 포트 : 30768
+dict
+2
+grpc
+ 이름 : combine-law / 통신 포트 : 30768
+dict
+2
+grpc
+ 이름 : combine-law / 통신 포트 : 30768
+dict
+2
+grpc
+ 이름 : combine-law / 통신 포트 : 30768
+test Done
+received: {
+"quizMetaData" : 
+	{
+	"strQOrigin" : "",
+	"strQRound" : "",
+	"uiNum" : 0,
+	"strQForm" : "",
+	"strQCat" : "",
+	"strQuestion" : "김영란 법이 뭐야?",
+	"mQOptions" : 
+	[
+	],
+	"mQCompOpts" :
+	[
+	],
+	"vQCompAnswerCands" : [],
+	"mQHints" :
+	[
+	]
+	},
+"orgQInfo" : 
+	{
+	"orgQUnit" : 
+		{
+		"strQuestion" : "김영란 법이 뭐야?",
+		"strTaggedQ" : "<PS_NAME:김영란/NNP> <CV_LAW:법/NNG>+이/JKS 뭐/NP+이/VCP+야/EF+?/SF",
+		"ndoc" : 
+		{"doc_id" : "",
+ "DCT" : "",
+ "category" : "",
+ "category_weight" : 0,
+ "title" : {"text" : "", "NE" : ""},
+ "metaInfo" : { },
+ "paragraphInfo" : [
+ ], 
+ "sentence" : [
+	{
+	"id" : 0,
+	"reserve_str" : "",
+	"text" : "김영란 법이 뭐야?",
+	"morp" : [
+		{"id" : 0, "lemma" : "김영란", "type" : "NNP", "position" : 0, "weight" : 0.85 },
+		{"id" : 1, "lemma" : "법", "type" : "NNG", "position" : 10, "weight" : 0.17813 },
+		{"id" : 2, "lemma" : "이", "type" : "JKS", "position" : 13, "weight" : 0.0360723 },
+		{"id" : 3, "lemma" : "뭐", "type" : "NP", "position" : 17, "weight" : 0.0245792 },
+		{"id" : 4, "lemma" : "이", "type" : "VCP", "position" : 20, "weight" : 0.0175768 },
+		{"id" : 5, "lemma" : "야", "type" : "EF", "position" : 20, "weight" : 0.212983 },
+		{"id" : 6, "lemma" : "?", "type" : "SF", "position" : 23, "weight" : 1 }
+	],
+	"morp_eval" : [
+		{"id" : 0, "result" : "김영란/NNG", "target" : "김영란", "word_id" : 0, "m_begin" : 0, "m_end" : 0},
+		{"id" : 1, "result" : "법/NNG+이/JKS", "target" : "법이", "word_id" : 1, "m_begin" : 1, "m_end" : 2},
+		{"id" : 2, "result" : "뭐/NP+이/VCP+야/EF+?/SF", "target" : "뭐야?", "word_id" : 2, "m_begin" : 3, "m_end" : 6}
+	],
+	"WSD" : [
+		{"id" : 0, "text" : "김영란", "type" : "NNP", "scode" : "00", "weight" : 0, "position" : 0, "begin" : 0, "end" : 0},
+		{"id" : 1, "text" : "법", "type" : "NNG", "scode" : "01", "weight" : 1.5, "position" : 10, "begin" : 1, "end" : 1},
+		{"id" : 2, "text" : "이", "type" : "JKS", "scode" : "00", "weight" : 1, "position" : 13, "begin" : 2, "end" : 2},
+		{"id" : 3, "text" : "뭐", "type" : "NP", "scode" : "00", "weight" : 0, "position" : 17, "begin" : 3, "end" : 3},
+		{"id" : 4, "text" : "이", "type" : "VCP", "scode" : "01", "weight" : 1, "position" : 20, "begin" : 4, "end" : 4},
+		{"id" : 5, "text" : "야", "type" : "EF", "scode" : "00", "weight" : 1, "position" : 20, "begin" : 5, "end" : 5},
+		{"id" : 6, "text" : "?", "type" : "SF", "scode" : "00", "weight" : 1, "position" : 23, "begin" : 6, "end" : 6}
+	],
+	"word" : [
+		{"id" : 0, "text" : "김영란", "type" : "", "begin" : 0, "end" : 0},
+		{"id" : 1, "text" : "법이", "type" : "", "begin" : 1, "end" : 2},
+		{"id" : 2, "text" : "뭐야?", "type" : "", "begin" : 3, "end" : 6}
+	],
+	"NE" : [
+		{"id" : 0, "text" : "김영란", "type" : "PS_NAME", "begin" : 0, "end" : 0, "weight" : 0.784073, "common_noun" : 0},
+		{"id" : 1, "text" : "법", "type" : "CV_LAW", "begin" : 1, "end" : 1, "weight" : 0.15634, "common_noun" : 0}
+	],
+	"chunk" : [
+	],
+	"dependency" : [
+		{"id" : 0, "text" : "김영란", "head" : 1, "label" : "NP", "mod" : [], "weight" : 0.518619 },
+		{"id" : 1, "text" : "법이", "head" : 2, "label" : "NP_SBJ", "mod" : [0], "weight" : 0.774689 },
+		{"id" : 2, "text" : "뭐야?", "head" : -1, "label" : "VNP", "mod" : [1], "weight" : 0.310689 }
+	],
+	"phrase_dependency" : [
+		{"id" : 0, "label" : "NP_SBJ", "text" : "김영란 법이", "begin" : 0, "end" : 1, "key_begin" : 0, "head_phrase" : 1, "sub_phrase" : [], "weight" : 0, "element" : [] },
+		{"id" : 1, "label" : "S", "text" : "P#0@SBJ이 뭐야?", "begin" : 0, "end" : 2, "key_begin" : 2, "head_phrase" : -1, "sub_phrase" : [0], "weight" : 0, 
+			"element" : [
+				{ "text" : "뭐", "label" : "NP", "begin" : 3, "end" : 3, "ne_type" : "" },
+				{ "text" : "야?", "label" : "VP", "begin" : 4, "end" : 6, "ne_type" : "" }
+			] }
+	],
+	"SRL" : [
+	],
+	"relation" : [
+	],
+	"SA" : [
+	],
+	"ZA" : [
+	]
+	}
+ ],
+ "entity" : [
+ ]
+}
+,
+		"vQTs" :
+		[
+			{
+			"qt" : 3,
+			"strQTClue" : "뭐",
+			"uiSentID" : 0,
+			"normQTClue" : {"id" : 3, "lemma" : "뭐", "type" : "NP", "position" : 17}
+			}
+		],
+		"vQFs" :
+		[
+			{
+			"strQF" : "뭐",
+			"uiSentID" : 0,
+			"dWeightQF" : 1,
+			"vQF_Morp" : 
+			[
+				{"id" : 3, "lemma" : "뭐", "type" : "NP", "position" : 17}
+			]
+			}
+		],
+		"vLATs" :
+		[
+		],
+		"vSATs" :
+		[
+			{
+			"atSAT" : 1801,
+			"strSAT" : "DS_DEFINITION",
+			"expanse_SAT" : [],
+			"dWeightSAT" : 0.68,
+			"dConfidenceSAT" : 0.68
+			}
+		],
+		"vSATRoots" :
+		[
+			{
+			"atSAT" : 1801,
+			"strSAT" : "DS_DEFINITION",
+			"expanse_SAT" : [],
+			"dWeightSAT" : 0.68,
+			"dConfidenceSAT" : 0.68
+			}
+		],
+		"vTitles" :
+		[
+			{
+			"strEntity" : "김영란 법",
+			"uiSentID" : 0,
+			"atEntityType" : 0,
+			"strEntityType" : "AT_NOT",
+			"dWeightTitle" : 0.358936,
+			"vEntity_Morp" : 
+			[
+				{"id" : 0, "lemma" : "김영란", "type" : "NNP", "position" : 0},
+				{"id" : 1, "lemma" : "법", "type" : "NNG", "position" : 10}
+			],
+			"vEntityInfo" : 
+			[
+				{
+				"strNormEntity" : "김영란 법",
+				"strOrgEntityTitle" : "부정청탁_및_금품등_수수의_금지에_관한_법률",
+				"strID" : "1253956",
+				"strExplain" : "부정청탁 및 금품 등 수수의 금지에 관한 법률(약칭 청탁금지법)은 대한민국에서 부정부패를 방지하기 위해 국민권익위원장이던 김영란의 제안으로 만들어진 법률로, 제안자의 이름을 따서 흔히 '김영란법'이라는 별칭으로 불린다. 공무원이나 공공기관 임직원, 학교 교직원 등이 일정 규모 이상의 (식사대접 3만원,선물 5만원,경조사비 10만원)상당의 금품을 받으면 직무 관련성이 없더라도 처벌하는 것을 골자로 하고 있다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/%EB%B6%80%EC%A0%95%EC%B2%AD%ED%83%81_%EB%B0%8F_%EA%B8%88%ED%92%88%EB%93%B1_%EC%88%98%EC%88%98%EC%9D%98_%EA%B8%88%EC%A7%80%EC%97%90_%EA%B4%80%ED%95%9C_%EB%B2%95%EB%A5%A0",
+				"dWeightEn" : 0.462117
+				},
+				{
+				"strNormEntity" : "김영란 법",
+				"strOrgEntityTitle" : "김영란법",
+				"strID" : "8112355",
+				"strExplain" : "공직자 등에 대한 부정 청탁 및 공직자 등의 금품 등의 수수(收受)를 금지하는 법률. 공직자 등의 공정한 직무 수행을 보장하고 공공 기관에 대한 국민의 신뢰를 확보하는 것을 목적으로 2016년 9월 28일에 시행되었다. 정식 명칭은 ‘부정 청탁 및 금품 등 수수의 금지에 관한 법률’이다.",
+				"strURL" : "https://opendict.korean.go.kr/search/searchResult?focus_name=query&query=김영란 법",
+				"dWeightEn" : 0.0
+				}
+			]
+			}
+		],
+		"vQTopic" :
+		[
+			{
+			"strEntity" : "김영란 법",
+			"uiSentID" : 0,
+			"atEntityType" : 0,
+			"strEntityType" : "AT_NOT",
+			"dWeightTitle" : 0.358936,
+			"vEntity_Morp" : 
+			[
+				{"id" : 0, "lemma" : "김영란", "type" : "NNP", "position" : 0},
+				{"id" : 1, "lemma" : "법", "type" : "NNG", "position" : 10}
+			],
+			"vEntityInfo" : 
+			[
+				{
+				"strNormEntity" : "김영란 법",
+				"strOrgEntityTitle" : "부정청탁_및_금품등_수수의_금지에_관한_법률",
+				"strID" : "1253956",
+				"strExplain" : "부정청탁 및 금품 등 수수의 금지에 관한 법률(약칭 청탁금지법)은 대한민국에서 부정부패를 방지하기 위해 국민권익위원장이던 김영란의 제안으로 만들어진 법률로, 제안자의 이름을 따서 흔히 '김영란법'이라는 별칭으로 불린다. 공무원이나 공공기관 임직원, 학교 교직원 등이 일정 규모 이상의 (식사대접 3만원,선물 5만원,경조사비 10만원)상당의 금품을 받으면 직무 관련성이 없더라도 처벌하는 것을 골자로 하고 있다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/%EB%B6%80%EC%A0%95%EC%B2%AD%ED%83%81_%EB%B0%8F_%EA%B8%88%ED%92%88%EB%93%B1_%EC%88%98%EC%88%98%EC%9D%98_%EA%B8%88%EC%A7%80%EC%97%90_%EA%B4%80%ED%95%9C_%EB%B2%95%EB%A5%A0",
+				"dWeightEn" : 0.462117
+				},
+				{
+				"strNormEntity" : "김영란 법",
+				"strOrgEntityTitle" : "김영란법",
+				"strID" : "8112355",
+				"strExplain" : "공직자 등에 대한 부정 청탁 및 공직자 등의 금품 등의 수수(收受)를 금지하는 법률. 공직자 등의 공정한 직무 수행을 보장하고 공공 기관에 대한 국민의 신뢰를 확보하는 것을 목적으로 2016년 9월 28일에 시행되었다. 정식 명칭은 ‘부정 청탁 및 금품 등 수수의 금지에 관한 법률’이다.",
+				"strURL" : "https://opendict.korean.go.kr/search/searchResult?focus_name=query&query=김영란 법",
+				"dWeightEn" : 0.0
+				}
+			]
+			}
+		],
+		"vQuotation" :
+		[
+		],
+		"spoInfo" : 
+		{
+			"topic" : 
+				{
+				"strEntity" : "김영란 법",
+				"uiSentID" : 0,
+				"atEntityType" : 0,
+				"strEntityType" : "AT_NOT",
+				"dWeightTitle" : 0.462121,
+				"vEntity_Morp" : 
+				[
+					{"id" : 0, "lemma" : "김영란", "type" : "NNP", "position" : 0},
+					{"id" : 1, "lemma" : "법", "type" : "NNG", "position" : 10}
+				],
+				"vEntityInfo" : 
+				[
+					{
+					"strNormEntity" : "김영란 법",
+					"strOrgEntityTitle" : "부정청탁_및_금품등_수수의_금지에_관한_법률",
+					"strID" : "1253956",
+					"strExplain" : "부정청탁 및 금품 등 수수의 금지에 관한 법률(약칭 청탁금지법)은 대한민국에서 부정부패를 방지하기 위해 국민권익위원장이던 김영란의 제안으로 만들어진 법률로, 제안자의 이름을 따서 흔히 '김영란법'이라는 별칭으로 불린다. 공무원이나 공공기관 임직원, 학교 교직원 등이 일정 규모 이상의 (식사대접 3만원,선물 5만원,경조사비 10만원)상당의 금품을 받으면 직무 관련성이 없더라도 처벌하는 것을 골자로 하고 있다.",
+					"strURL" : "https://ko.wikipedia.org/wiki/%EB%B6%80%EC%A0%95%EC%B2%AD%ED%83%81_%EB%B0%8F_%EA%B8%88%ED%92%88%EB%93%B1_%EC%88%98%EC%88%98%EC%9D%98_%EA%B8%88%EC%A7%80%EC%97%90_%EA%B4%80%ED%95%9C_%EB%B2%95%EB%A5%A0",
+					"dWeightEn" : 0.462117
+					},
+					{
+					"strNormEntity" : "김영란 법",
+					"strOrgEntityTitle" : "김영란법",
+					"strID" : "8112355",
+					"strExplain" : "공직자 등에 대한 부정 청탁 및 공직자 등의 금품 등의 수수(收受)를 금지하는 법률. 공직자 등의 공정한 직무 수행을 보장하고 공공 기관에 대한 국민의 신뢰를 확보하는 것을 목적으로 2016년 9월 28일에 시행되었다. 정식 명칭은 ‘부정 청탁 및 금품 등 수수의 금지에 관한 법률’이다.",
+					"strURL" : "https://opendict.korean.go.kr/search/searchResult?focus_name=query&query=김영란 법",
+					"dWeightEn" : 0.0
+					}
+				]
+				},
+			"propClue" : 
+				{
+				"strInfo" : "뭐",
+				"strMorpNEInfo" : "뭐",
+				"vMorpInfo" : 
+				[
+					{"id" : 3, "lemma" : "뭐", "type" : "NP", "position" : 17}
+				],
+				"vNEInfo" : 
+				[
+				]
+				},
+			"topic_Const" : 
+				{
+				"loc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"time" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"comparison" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"etc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					}
+				},
+			"ans_Const" : 
+				{
+				"loc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"time" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"comparison" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"etc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					}
+				},
+			"bIsComparison" : "FALSE"
+		},
+		"dIntegrativeConf" : 0.0
+		},
+	"qDecompType" : 3,
+	"strQDecompType" : "",
+	"vSubQRelation" : 
+	[
+	],
+	"vSubQInfo" : 
+	[
+	],
+	"dQH_Weight" : 0.0
+	},
+"QClassification" : 
+	{
+	"vQCType" : 
+	[
+	{
+	"qType4Chg" : 320,
+	"strQType4Chg" : "서술형-정의",
+	"dWeightCQT" : 0.68
+	}
+	]
+	}
+}
+||0||{}||0||{"faq_clause":[{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":1,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"e4b5595642d979e63dfa579b3d0d0a72","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"김영란법이 시행된 것은 언제인가요?","docID":"74003","contentNo":"제4장","enforcement":"1982","weight":13.322596,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":2,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"4a3ca12e31f41e91cc3923f4536ce142","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"김영란법은 언제 제정되었나요?","docID":"74002","contentNo":"제4장","enforcement":"1982","weight":10.937662,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":3,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"2de5fcf52c318df4ca65c4d36024168a","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"4대강이 뭐야?","docID":"39","contentNo":"제4장","enforcement":"1982","weight":6.471757,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"탈락","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":4,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"74da70130bdf0a7177084364886bb188","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"AKS 소수판별법이 판별하는 것은 뭐야?","docID":"174002","contentNo":"제4장","enforcement":"1982","weight":5.6664186,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":5,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"4f71566b8c4fd7be122ecd8ce1c027ab","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"퀘이커의 창시자 이름이 뭐야?","docID":"173002","contentNo":"제4장","enforcement":"1982","weight":5.5644827,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"}]}INFO:werkzeug:129.254.186.88 - - [18/May/2020 15:57:13] "[37mPOST /result HTTP/1.1[0m" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 2574
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 16:06:19] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 16:06:19] "[33mGET /js/materialize.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 16:06:19] "[33mGET /js/init.js HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 2574
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 16:06:19] "[37mGET /combine HTTP/1.1[0m" 200 -
+
+dict
+2
+grpc
+ 이름 : combine-devcode / 통신 포트 : 30819
+2
+grpc
+ 이름 : combine-law / 통신 포트 : 30768
+dict
+2
+grpc
+ 이름 : combine-devcode / 통신 포트 : 30819
+2
+grpc
+ 이름 : combine-law / 통신 포트 : 30768
+test Done
+received: {
+"quizMetaData" : 
+	{
+	"strQOrigin" : "",
+	"strQRound" : "",
+	"uiNum" : 0,
+	"strQForm" : "",
+	"strQCat" : "",
+	"strQuestion" : "김영란법이 뭐야{java MODULE1 output}?",
+	"mQOptions" : 
+	[
+	],
+	"mQCompOpts" :
+	[
+	],
+	"vQCompAnswerCands" : [],
+	"mQHints" :
+	[
+	]
+	},
+"orgQInfo" : 
+	{
+	"orgQUnit" : 
+		{
+		"strQuestion" : "김영란법이 뭐야{java MODULE1 output}?",
+		"strTaggedQ" : "<CV_LAW:김영란법/NNP>+이/JKS 뭐/NP+이/VCP+야/EF+{/SS+java/SL MODULE/SL+1/SN output/SL+}/SS+?/SF",
+		"ndoc" : 
+		{"doc_id" : "",
+ "DCT" : "",
+ "category" : "",
+ "category_weight" : 0,
+ "title" : {"text" : "", "NE" : ""},
+ "metaInfo" : { },
+ "paragraphInfo" : [
+ ], 
+ "sentence" : [
+	{
+	"id" : 0,
+	"reserve_str" : "",
+	"text" : "김영란법이 뭐야{java MODULE1 output}?",
+	"morp" : [
+		{"id" : 0, "lemma" : "김영란법", "type" : "NNP", "position" : 0, "weight" : 0.6 },
+		{"id" : 1, "lemma" : "이", "type" : "JKS", "position" : 12, "weight" : 0.0234517 },
+		{"id" : 2, "lemma" : "뭐", "type" : "NP", "position" : 16, "weight" : 0.0245792 },
+		{"id" : 3, "lemma" : "이", "type" : "VCP", "position" : 19, "weight" : 0.0175768 },
+		{"id" : 4, "lemma" : "야", "type" : "EF", "position" : 19, "weight" : 0.212983 },
+		{"id" : 5, "lemma" : "{", "type" : "SS", "position" : 22, "weight" : 1 },
+		{"id" : 6, "lemma" : "java", "type" : "SL", "position" : 23, "weight" : 1 },
+		{"id" : 7, "lemma" : "MODULE", "type" : "SL", "position" : 28, "weight" : 1 },
+		{"id" : 8, "lemma" : "1", "type" : "SN", "position" : 34, "weight" : 1 },
+		{"id" : 9, "lemma" : "output", "type" : "SL", "position" : 36, "weight" : 1 },
+		{"id" : 10, "lemma" : "}", "type" : "SS", "position" : 42, "weight" : 1 },
+		{"id" : 11, "lemma" : "?", "type" : "SF", "position" : 43, "weight" : 1 }
+	],
+	"morp_eval" : [
+		{"id" : 0, "result" : "김영란법/NNG+이/JKS", "target" : "김영란법이", "word_id" : 0, "m_begin" : 0, "m_end" : 1},
+		{"id" : 1, "result" : "뭐/NP+이/VCP+야/EF+{/SS+java/SL", "target" : "뭐야{java", "word_id" : 1, "m_begin" : 2, "m_end" : 6},
+		{"id" : 2, "result" : "MODULE/SL+1/SN", "target" : "MODULE1", "word_id" : 2, "m_begin" : 7, "m_end" : 8},
+		{"id" : 3, "result" : "output/SL+}/SS+?/SF", "target" : "output}?", "word_id" : 3, "m_begin" : 9, "m_end" : 11}
+	],
+	"WSD" : [
+		{"id" : 0, "text" : "김영란법", "type" : "NNP", "scode" : "00", "weight" : 0, "position" : 0, "begin" : 0, "end" : 0},
+		{"id" : 1, "text" : "이", "type" : "JKS", "scode" : "00", "weight" : 1, "position" : 12, "begin" : 1, "end" : 1},
+		{"id" : 2, "text" : "뭐", "type" : "NP", "scode" : "00", "weight" : 0, "position" : 16, "begin" : 2, "end" : 2},
+		{"id" : 3, "text" : "이", "type" : "VCP", "scode" : "01", "weight" : 1, "position" : 19, "begin" : 3, "end" : 3},
+		{"id" : 4, "text" : "야", "type" : "EF", "scode" : "00", "weight" : 1, "position" : 19, "begin" : 4, "end" : 4},
+		{"id" : 5, "text" : "{", "type" : "SS", "scode" : "00", "weight" : 1, "position" : 22, "begin" : 5, "end" : 5},
+		{"id" : 6, "text" : "java", "type" : "SL", "scode" : "00", "weight" : 1, "position" : 23, "begin" : 6, "end" : 6},
+		{"id" : 7, "text" : "MODULE", "type" : "SL", "scode" : "00", "weight" : 1, "position" : 28, "begin" : 7, "end" : 7},
+		{"id" : 8, "text" : "1", "type" : "SN", "scode" : "00", "weight" : 1, "position" : 34, "begin" : 8, "end" : 8},
+		{"id" : 9, "text" : "output", "type" : "SL", "scode" : "00", "weight" : 1, "position" : 36, "begin" : 9, "end" : 9},
+		{"id" : 10, "text" : "}", "type" : "SS", "scode" : "00", "weight" : 1, "position" : 42, "begin" : 10, "end" : 10},
+		{"id" : 11, "text" : "?", "type" : "SF", "scode" : "00", "weight" : 1, "position" : 43, "begin" : 11, "end" : 11}
+	],
+	"word" : [
+		{"id" : 0, "text" : "김영란법이", "type" : "", "begin" : 0, "end" : 1},
+		{"id" : 1, "text" : "뭐야{java", "type" : "", "begin" : 2, "end" : 6},
+		{"id" : 2, "text" : "MODULE1", "type" : "", "begin" : 7, "end" : 8},
+		{"id" : 3, "text" : "output}?", "type" : "", "begin" : 9, "end" : 11}
+	],
+	"NE" : [
+		{"id" : 0, "text" : "김영란법", "type" : "CV_LAW", "begin" : 0, "end" : 0, "weight" : 0.172126, "common_noun" : 0}
+	],
+	"chunk" : [
+	],
+	"dependency" : [
+		{"id" : 0, "text" : "김영란법이", "head" : 3, "label" : "NP_SBJ", "mod" : [], "weight" : 0.414058 },
+		{"id" : 1, "text" : "뭐야{java", "head" : 3, "label" : "NP", "mod" : [], "weight" : 0.236934 },
+		{"id" : 2, "text" : "MODULE1", "head" : 3, "label" : "NP", "mod" : [], "weight" : 0.58244 },
+		{"id" : 3, "text" : "output}?", "head" : -1, "label" : "NP", "mod" : [0, 1, 2], "weight" : 0.0197425 }
+	],
+	"phrase_dependency" : [
+		{"id" : 0, "label" : "NP_SBJ", "text" : "김영란법이", "begin" : 0, "end" : 0, "key_begin" : 0, "head_phrase" : 1, "sub_phrase" : [], "weight" : 0, "element" : [] },
+		{"id" : 1, "label" : "S", "text" : "P#0@SBJ이 뭐야{java MODULE1 output}?", "begin" : 0, "end" : 3, "key_begin" : 1, "head_phrase" : -1, "sub_phrase" : [0], "weight" : 0, "element" : [] }
+	],
+	"SRL" : [
+	],
+	"relation" : [
+	],
+	"SA" : [
+	],
+	"ZA" : [
+	]
+	}
+ ],
+ "entity" : [
+ ]
+}
+,
+		"vQTs" :
+		[
+			{
+			"qt" : 3,
+			"strQTClue" : "뭐",
+			"uiSentID" : 0,
+			"normQTClue" : {"id" : 2, "lemma" : "뭐", "type" : "NP", "position" : 16}
+			}
+		],
+		"vQFs" :
+		[
+			{
+			"strQF" : "뭐",
+			"uiSentID" : 0,
+			"dWeightQF" : 1,
+			"vQF_Morp" : 
+			[
+				{"id" : 2, "lemma" : "뭐", "type" : "NP", "position" : 16}
+			]
+			}
+		],
+		"vLATs" :
+		[
+		],
+		"vSATs" :
+		[
+			{
+			"atSAT" : 1801,
+			"strSAT" : "DS_DEFINITION",
+			"expanse_SAT" : [],
+			"dWeightSAT" : 0.628416,
+			"dConfidenceSAT" : 0.0
+			}
+		],
+		"vSATRoots" :
+		[
+			{
+			"atSAT" : 1801,
+			"strSAT" : "DS_DEFINITION",
+			"expanse_SAT" : [],
+			"dWeightSAT" : 0.628416,
+			"dConfidenceSAT" : 0.0
+			}
+		],
+		"vTitles" :
+		[
+			{
+			"strEntity" : "김영란법",
+			"uiSentID" : 0,
+			"atEntityType" : 818,
+			"strEntityType" : "CV_LAW",
+			"dWeightTitle" : 0.64993,
+			"vEntity_Morp" : 
+			[
+				{"id" : 0, "lemma" : "김영란법", "type" : "NNP", "position" : 0}
+			],
+			"vEntityInfo" : 
+			[
+				{
+				"strNormEntity" : "김영란법",
+				"strOrgEntityTitle" : "부정청탁_및_금품등_수수의_금지에_관한_법률",
+				"strID" : "1253956",
+				"strExplain" : "부정청탁 및 금품 등 수수의 금지에 관한 법률(약칭 청탁금지법)은 대한민국에서 부정부패를 방지하기 위해 국민권익위원장이던 김영란의 제안으로 만들어진 법률로, 제안자의 이름을 따서 흔히 '김영란법'이라는 별칭으로 불린다. 공무원이나 공공기관 임직원, 학교 교직원 등이 일정 규모 이상의 (식사대접 3만원,선물 5만원,경조사비 10만원)상당의 금품을 받으면 직무 관련성이 없더라도 처벌하는 것을 골자로 하고 있다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/%EB%B6%80%EC%A0%95%EC%B2%AD%ED%83%81_%EB%B0%8F_%EA%B8%88%ED%92%88%EB%93%B1_%EC%88%98%EC%88%98%EC%9D%98_%EA%B8%88%EC%A7%80%EC%97%90_%EA%B4%80%ED%95%9C_%EB%B2%95%EB%A5%A0",
+				"dWeightEn" : 0.462117
+				},
+				{
+				"strNormEntity" : "김영란법",
+				"strOrgEntityTitle" : "김영란법",
+				"strID" : "8112355",
+				"strExplain" : "공직자 등에 대한 부정 청탁 및 공직자 등의 금품 등의 수수(收受)를 금지하는 법률. 공직자 등의 공정한 직무 수행을 보장하고 공공 기관에 대한 국민의 신뢰를 확보하는 것을 목적으로 2016년 9월 28일에 시행되었다. 정식 명칭은 ‘부정 청탁 및 금품 등 수수의 금지에 관한 법률’이다.",
+				"strURL" : "https://opendict.korean.go.kr/search/searchResult?focus_name=query&query=김영란법",
+				"dWeightEn" : 0.0
+				}
+			]
+			}
+		],
+		"vQTopic" :
+		[
+			{
+			"strEntity" : "김영란법",
+			"uiSentID" : 0,
+			"atEntityType" : 818,
+			"strEntityType" : "CV_LAW",
+			"dWeightTitle" : 0.64993,
+			"vEntity_Morp" : 
+			[
+				{"id" : 0, "lemma" : "김영란법", "type" : "NNP", "position" : 0}
+			],
+			"vEntityInfo" : 
+			[
+				{
+				"strNormEntity" : "김영란법",
+				"strOrgEntityTitle" : "부정청탁_및_금품등_수수의_금지에_관한_법률",
+				"strID" : "1253956",
+				"strExplain" : "부정청탁 및 금품 등 수수의 금지에 관한 법률(약칭 청탁금지법)은 대한민국에서 부정부패를 방지하기 위해 국민권익위원장이던 김영란의 제안으로 만들어진 법률로, 제안자의 이름을 따서 흔히 '김영란법'이라는 별칭으로 불린다. 공무원이나 공공기관 임직원, 학교 교직원 등이 일정 규모 이상의 (식사대접 3만원,선물 5만원,경조사비 10만원)상당의 금품을 받으면 직무 관련성이 없더라도 처벌하는 것을 골자로 하고 있다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/%EB%B6%80%EC%A0%95%EC%B2%AD%ED%83%81_%EB%B0%8F_%EA%B8%88%ED%92%88%EB%93%B1_%EC%88%98%EC%88%98%EC%9D%98_%EA%B8%88%EC%A7%80%EC%97%90_%EA%B4%80%ED%95%9C_%EB%B2%95%EB%A5%A0",
+				"dWeightEn" : 0.462117
+				},
+				{
+				"strNormEntity" : "김영란법",
+				"strOrgEntityTitle" : "김영란법",
+				"strID" : "8112355",
+				"strExplain" : "공직자 등에 대한 부정 청탁 및 공직자 등의 금품 등의 수수(收受)를 금지하는 법률. 공직자 등의 공정한 직무 수행을 보장하고 공공 기관에 대한 국민의 신뢰를 확보하는 것을 목적으로 2016년 9월 28일에 시행되었다. 정식 명칭은 ‘부정 청탁 및 금품 등 수수의 금지에 관한 법률’이다.",
+				"strURL" : "https://opendict.korean.go.kr/search/searchResult?focus_name=query&query=김영란법",
+				"dWeightEn" : 0.0
+				}
+			]
+			}
+		],
+		"vQuotation" :
+		[
+		],
+		"spoInfo" : 
+		{
+			"topic" : 
+				{
+				"strEntity" : "김영란법",
+				"uiSentID" : 0,
+				"atEntityType" : 818,
+				"strEntityType" : "CV_LAW",
+				"dWeightTitle" : 0.191796,
+				"vEntity_Morp" : 
+				[
+					{"id" : 0, "lemma" : "김영란법", "type" : "NNP", "position" : 0}
+				],
+				"vEntityInfo" : 
+				[
+					{
+					"strNormEntity" : "김영란법",
+					"strOrgEntityTitle" : "부정청탁_및_금품등_수수의_금지에_관한_법률",
+					"strID" : "1253956",
+					"strExplain" : "부정청탁 및 금품 등 수수의 금지에 관한 법률(약칭 청탁금지법)은 대한민국에서 부정부패를 방지하기 위해 국민권익위원장이던 김영란의 제안으로 만들어진 법률로, 제안자의 이름을 따서 흔히 '김영란법'이라는 별칭으로 불린다. 공무원이나 공공기관 임직원, 학교 교직원 등이 일정 규모 이상의 (식사대접 3만원,선물 5만원,경조사비 10만원)상당의 금품을 받으면 직무 관련성이 없더라도 처벌하는 것을 골자로 하고 있다.",
+					"strURL" : "https://ko.wikipedia.org/wiki/%EB%B6%80%EC%A0%95%EC%B2%AD%ED%83%81_%EB%B0%8F_%EA%B8%88%ED%92%88%EB%93%B1_%EC%88%98%EC%88%98%EC%9D%98_%EA%B8%88%EC%A7%80%EC%97%90_%EA%B4%80%ED%95%9C_%EB%B2%95%EB%A5%A0",
+					"dWeightEn" : 0.462117
+					},
+					{
+					"strNormEntity" : "김영란법",
+					"strOrgEntityTitle" : "김영란법",
+					"strID" : "8112355",
+					"strExplain" : "공직자 등에 대한 부정 청탁 및 공직자 등의 금품 등의 수수(收受)를 금지하는 법률. 공직자 등의 공정한 직무 수행을 보장하고 공공 기관에 대한 국민의 신뢰를 확보하는 것을 목적으로 2016년 9월 28일에 시행되었다. 정식 명칭은 ‘부정 청탁 및 금품 등 수수의 금지에 관한 법률’이다.",
+					"strURL" : "https://opendict.korean.go.kr/search/searchResult?focus_name=query&query=김영란법",
+					"dWeightEn" : 0.0
+					}
+				]
+				},
+			"propClue" : 
+				{
+				"strInfo" : "",
+				"strMorpNEInfo" : "",
+				"vMorpInfo" : 
+				[
+				],
+				"vNEInfo" : 
+				[
+				]
+				},
+			"topic_Const" : 
+				{
+				"loc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"time" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"comparison" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"etc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					}
+				},
+			"ans_Const" : 
+				{
+				"loc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"time" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"comparison" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"etc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					}
+				},
+			"bIsComparison" : "FALSE"
+		},
+		"dIntegrativeConf" : 0.0
+		},
+	"qDecompType" : 3,
+	"strQDecompType" : "",
+	"vSubQRelation" : 
+	[
+	],
+	"vSubQInfo" : 
+	[
+	],
+	"dQH_Weight" : 0.0
+	},
+"QClassification" : 
+	{
+	"vQCType" : 
+	[
+	{
+	"qType4Chg" : 320,
+	"strQType4Chg" : "서술형-정의",
+	"dWeightCQT" : 0.768755
+	}
+	]
+	}
+}
+INFO:werkzeug:129.254.186.88 - - [18/May/2020 16:06:25] "[37mPOST /result HTTP/1.1[0m" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 142
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:54:04] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:54:04] "[37mGET /static/css/materialize.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:54:04] "[33mGET /js/materialize.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:54:04] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:54:04] "[33mGET /js/init.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:54:04] "[33mGET /js/materialize.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:54:04] "[33mGET /js/init.js HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 142
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:54:04] "[37mGET /combine HTTP/1.1[0m" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 1364
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:54:31] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:54:31] "[33mGET /js/materialize.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:54:31] "[33mGET /js/init.js HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 1364
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:54:31] "[37mGET /combine HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:54:34] "[37mPOST /result HTTP/1.1[0m" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 1364
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:57:17] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:57:17] "[33mGET /js/materialize.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:57:17] "[33mGET /js/init.js HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 1364
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:57:17] "[37mGET /combine HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:57:20] "[37mPOST /result HTTP/1.1[0m" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 2573
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:57:48] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:57:49] "[33mGET /js/materialize.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:57:49] "[33mGET /js/init.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:57:49] "[33mGET /js/init.js HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 2573
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:57:49] "[37mGET /combine HTTP/1.1[0m" 200 -
+
+dict
+dict
+dict
+2
+grpc
+ 이름 : combine-devcode / 통신 포트 : 31398
+dict
+2
+grpc
+ 이름 : combine-devcode / 통신 포트 : 31398
+test Done
+received: 테스트{java MODULE1 output}
+dict
+2
+grpc
+ 이름 : combine-devcode / 통신 포트 : 31398
+dict
+2
+grpc
+ 이름 : combine-devcode / 통신 포트 : 31398
+test Done
+received: 123{java MODULE2 output}
+dict
+2
+grpc
+ 이름 : combine-devcode / 통신 포트 : 31398
+2
+grpc
+ 이름 : combine-law / 통신 포트 : 31653
+dict
+2
+grpc
+ 이름 : combine-devcode / 통신 포트 : 31398
+2
+grpc
+ 이름 : combine-law / 통신 포트 : 31653
+test Done
+received: {
+"quizMetaData" : 
+	{
+	"strQOrigin" : "",
+	"strQRound" : "",
+	"uiNum" : 0,
+	"strQForm" : "",
+	"strQCat" : "",
+	"strQuestion" : "테스트?",
+	"mQOptions" : 
+	[
+	],
+	"mQCompOpts" :
+	[
+	],
+	"vQCompAnswerCands" : [],
+	"mQHints" :
+	[
+	]
+	},
+"orgQInfo" : 
+	{
+	"orgQUnit" : 
+		{
+		"strQuestion" : "테스트?",
+		"strTaggedQ" : "테스트/NNG+?/SF",
+		"ndoc" : 
+		{"doc_id" : "",
+ "DCT" : "",
+ "category" : "",
+ "category_weight" : 0,
+ "title" : {"text" : "", "NE" : ""},
+ "metaInfo" : { },
+ "paragraphInfo" : [
+ ], 
+ "sentence" : [
+	{
+	"id" : 0,
+	"reserve_str" : "",
+	"text" : "테스트?",
+	"morp" : [
+		{"id" : 0, "lemma" : "테스트", "type" : "NNG", "position" : 0, "weight" : 0.9 },
+		{"id" : 1, "lemma" : "?", "type" : "SF", "position" : 9, "weight" : 1 }
+	],
+	"morp_eval" : [
+		{"id" : 0, "result" : "테스트/NNG+?/SF", "target" : "테스트?", "word_id" : 0, "m_begin" : 0, "m_end" : 1}
+	],
+	"WSD" : [
+		{"id" : 0, "text" : "테스트", "type" : "NNG", "scode" : "00", "weight" : 0, "position" : 0, "begin" : 0, "end" : 0},
+		{"id" : 1, "text" : "?", "type" : "SF", "scode" : "00", "weight" : 1, "position" : 9, "begin" : 1, "end" : 1}
+	],
+	"word" : [
+		{"id" : 0, "text" : "테스트?", "type" : "", "begin" : 0, "end" : 1}
+	],
+	"NE" : [
+	],
+	"chunk" : [
+	],
+	"dependency" : [
+		{"id" : 0, "text" : "테스트?", "head" : -1, "label" : "NP", "mod" : [], "weight" : 0.490375 }
+	],
+	"phrase_dependency" : [
+		{"id" : 0, "label" : "NP", "text" : "테스트?", "begin" : 0, "end" : 0, "key_begin" : 0, "head_phrase" : -1, "sub_phrase" : [], "weight" : 0, "element" : [] }
+	],
+	"SRL" : [
+	],
+	"relation" : [
+	],
+	"SA" : [
+	],
+	"ZA" : [
+	]
+	}
+ ],
+ "entity" : [
+ ]
+}
+,
+		"vQTs" :
+		[
+			{
+			"qt" : 11,
+			"strQTClue" : "",
+			"uiSentID" : 0,
+			"normQTClue" : {"id" : -1, "lemma" : "", "type" : "", "position" : -1}
+			}
+		],
+		"vQFs" :
+		[
+		],
+		"vLATs" :
+		[
+		],
+		"vSATs" :
+		[
+			{
+			"atSAT" : 1801,
+			"strSAT" : "DS_DEFINITION",
+			"expanse_SAT" : [],
+			"dWeightSAT" : 0.68,
+			"dConfidenceSAT" : 0.68
+			}
+		],
+		"vSATRoots" :
+		[
+			{
+			"atSAT" : 1801,
+			"strSAT" : "DS_DEFINITION",
+			"expanse_SAT" : [],
+			"dWeightSAT" : 0.68,
+			"dConfidenceSAT" : 0.68
+			}
+		],
+		"vTitles" :
+		[
+			{
+			"strEntity" : "테스트",
+			"uiSentID" : 0,
+			"atEntityType" : 0,
+			"strEntityType" : "AT_NOT",
+			"dWeightTitle" : 0.307124,
+			"vEntity_Morp" : 
+			[
+				{"id" : 0, "lemma" : "테스트", "type" : "NNG", "position" : 0}
+			],
+			"vEntityInfo" : 
+			[
+				{
+				"strNormEntity" : "테스트",
+				"strOrgEntityTitle" : "소프트웨어_테스트",
+				"strID" : "0163689",
+				"strExplain" : "소프트웨어 테스트(영어: software test)는 주요 이해관계자들에게 시험 대상 제품 또는 서비스의 품질에 관한 정보를 제공하는 조사 과정이다. 소프트웨어 테스트는 또한 소프트웨어에 대한 객관적이고 독립적인 시각을 제공하여 사업주체가 소프트웨어 구현의 위험성을 올바로 이해하도록 한다. 시험 기술에는 프로그램이나 응용 프로그램을 실행하여 소프트웨어 버그를 찾는 절차를 포함되나 이에 국한되지는 않는다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4_%ED%85%8C%EC%8A%A4%ED%8A%B8",
+				"dWeightEn" : 0.462117
+				},
+				{
+				"strNormEntity" : "테스트",
+				"strOrgEntityTitle" : "앤드루_마틴",
+				"strID" : "0470577",
+				"strExplain" : "앤드루 제임스 로버트 패트릭 마틴(영어: Andrew James Robert Patrick Martin, 1975년 3월 17일 ~ 2009년 3월 13일) 은 캐나다 출생의 WWE 프로레슬러였으며, 테스트(Test)라는 이름으로 알려져 있다. 1994년 프로레슬링에 입문하였으며, 2008년에 은퇴하였다. 2009년 3월 13일 스테로이드 부작용으로 사망하였다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/%EC%95%A4%EB%93%9C%EB%A3%A8_%EB%A7%88%ED%8B%B4",
+				"dWeightEn" : 0.28592
+				},
+				{
+				"strNormEntity" : "테스트",
+				"strOrgEntityTitle" : "테스트",
+				"strID" : "8703874",
+				"strExplain" : "사람의 학력, 지능, 능력이나 제품의 성능 따위를 알아보기 위하여 검사하거나 시험함. 또는 그런 검사나 시험.",
+				"strURL" : "https://opendict.korean.go.kr/search/searchResult?focus_name=query&query=테스트",
+				"dWeightEn" : 0.0
+				}
+			]
+			}
+		],
+		"vQTopic" :
+		[
+			{
+			"strEntity" : "테스트",
+			"uiSentID" : 0,
+			"atEntityType" : 0,
+			"strEntityType" : "AT_NOT",
+			"dWeightTitle" : 0.307124,
+			"vEntity_Morp" : 
+			[
+				{"id" : 0, "lemma" : "테스트", "type" : "NNG", "position" : 0}
+			],
+			"vEntityInfo" : 
+			[
+				{
+				"strNormEntity" : "테스트",
+				"strOrgEntityTitle" : "소프트웨어_테스트",
+				"strID" : "0163689",
+				"strExplain" : "소프트웨어 테스트(영어: software test)는 주요 이해관계자들에게 시험 대상 제품 또는 서비스의 품질에 관한 정보를 제공하는 조사 과정이다. 소프트웨어 테스트는 또한 소프트웨어에 대한 객관적이고 독립적인 시각을 제공하여 사업주체가 소프트웨어 구현의 위험성을 올바로 이해하도록 한다. 시험 기술에는 프로그램이나 응용 프로그램을 실행하여 소프트웨어 버그를 찾는 절차를 포함되나 이에 국한되지는 않는다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4_%ED%85%8C%EC%8A%A4%ED%8A%B8",
+				"dWeightEn" : 0.462117
+				},
+				{
+				"strNormEntity" : "테스트",
+				"strOrgEntityTitle" : "앤드루_마틴",
+				"strID" : "0470577",
+				"strExplain" : "앤드루 제임스 로버트 패트릭 마틴(영어: Andrew James Robert Patrick Martin, 1975년 3월 17일 ~ 2009년 3월 13일) 은 캐나다 출생의 WWE 프로레슬러였으며, 테스트(Test)라는 이름으로 알려져 있다. 1994년 프로레슬링에 입문하였으며, 2008년에 은퇴하였다. 2009년 3월 13일 스테로이드 부작용으로 사망하였다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/%EC%95%A4%EB%93%9C%EB%A3%A8_%EB%A7%88%ED%8B%B4",
+				"dWeightEn" : 0.28592
+				},
+				{
+				"strNormEntity" : "테스트",
+				"strOrgEntityTitle" : "테스트",
+				"strID" : "8703874",
+				"strExplain" : "사람의 학력, 지능, 능력이나 제품의 성능 따위를 알아보기 위하여 검사하거나 시험함. 또는 그런 검사나 시험.",
+				"strURL" : "https://opendict.korean.go.kr/search/searchResult?focus_name=query&query=테스트",
+				"dWeightEn" : 0.0
+				}
+			]
+			}
+		],
+		"vQuotation" :
+		[
+		],
+		"spoInfo" : 
+		{
+			"topic" : 
+				{
+				"strEntity" : "테스트",
+				"uiSentID" : 0,
+				"atEntityType" : 0,
+				"strEntityType" : "AT_NOT",
+				"dWeightTitle" : 0.7,
+				"vEntity_Morp" : 
+				[
+					{"id" : 0, "lemma" : "테스트", "type" : "NNG", "position" : 0}
+				],
+				"vEntityInfo" : 
+				[
+					{
+					"strNormEntity" : "테스트",
+					"strOrgEntityTitle" : "소프트웨어_테스트",
+					"strID" : "0163689",
+					"strExplain" : "소프트웨어 테스트(영어: software test)는 주요 이해관계자들에게 시험 대상 제품 또는 서비스의 품질에 관한 정보를 제공하는 조사 과정이다. 소프트웨어 테스트는 또한 소프트웨어에 대한 객관적이고 독립적인 시각을 제공하여 사업주체가 소프트웨어 구현의 위험성을 올바로 이해하도록 한다. 시험 기술에는 프로그램이나 응용 프로그램을 실행하여 소프트웨어 버그를 찾는 절차를 포함되나 이에 국한되지는 않는다.",
+					"strURL" : "https://ko.wikipedia.org/wiki/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4_%ED%85%8C%EC%8A%A4%ED%8A%B8",
+					"dWeightEn" : 0.462117
+					},
+					{
+					"strNormEntity" : "테스트",
+					"strOrgEntityTitle" : "앤드루_마틴",
+					"strID" : "0470577",
+					"strExplain" : "앤드루 제임스 로버트 패트릭 마틴(영어: Andrew James Robert Patrick Martin, 1975년 3월 17일 ~ 2009년 3월 13일) 은 캐나다 출생의 WWE 프로레슬러였으며, 테스트(Test)라는 이름으로 알려져 있다. 1994년 프로레슬링에 입문하였으며, 2008년에 은퇴하였다. 2009년 3월 13일 스테로이드 부작용으로 사망하였다.",
+					"strURL" : "https://ko.wikipedia.org/wiki/%EC%95%A4%EB%93%9C%EB%A3%A8_%EB%A7%88%ED%8B%B4",
+					"dWeightEn" : 0.28592
+					},
+					{
+					"strNormEntity" : "테스트",
+					"strOrgEntityTitle" : "테스트",
+					"strID" : "8703874",
+					"strExplain" : "사람의 학력, 지능, 능력이나 제품의 성능 따위를 알아보기 위하여 검사하거나 시험함. 또는 그런 검사나 시험.",
+					"strURL" : "https://opendict.korean.go.kr/search/searchResult?focus_name=query&query=테스트",
+					"dWeightEn" : 0.0
+					}
+				]
+				},
+			"propClue" : 
+				{
+				"strInfo" : "",
+				"strMorpNEInfo" : "",
+				"vMorpInfo" : 
+				[
+				],
+				"vNEInfo" : 
+				[
+				]
+				},
+			"topic_Const" : 
+				{
+				"loc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"time" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"comparison" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"etc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					}
+				},
+			"ans_Const" : 
+				{
+				"loc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"time" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"comparison" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"etc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					}
+				},
+			"bIsComparison" : "FALSE"
+		},
+		"dIntegrativeConf" : 0.0
+		},
+	"qDecompType" : 3,
+	"strQDecompType" : "",
+	"vSubQRelation" : 
+	[
+	],
+	"vSubQInfo" : 
+	[
+	],
+	"dQH_Weight" : 0.0
+	},
+"QClassification" : 
+	{
+	"vQCType" : 
+	[
+	{
+	"qType4Chg" : 320,
+	"strQType4Chg" : "서술형-정의",
+	"dWeightCQT" : 0.68
+	}
+	]
+	}
+}
+||0||{}||0||{"faq_clause":[{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":1,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"1ed3ca548fdefb05e9c73ca54471cad9","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"튜링 테스트 목적","docID":"175","contentNo":"제4장","enforcement":"1982","weight":6.471757,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"탈락(조사)","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":2,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"774395680c61f52d328b3f3bdd05e93e","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"튜링 테스트는 무엇을 알아내기 위한 테스트인가요?","docID":"29","contentNo":"제4장","enforcement":"1982","weight":6.19294,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"다른표현(명사)","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":3,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"c236fb35435bcb0861ed45c8f9012cdf","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"튜링 테스트는 무엇을 판별하고자하는 테스트인가요?","docID":"29","contentNo":"제4장","enforcement":"1982","weight":6.112571,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"다른표현(명사)","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":4,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"f22f26e18aec65aaa64269b1a61ef3c2","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"튜링 테스트의 역할이 뭐지","docID":"175","contentNo":"제4장","enforcement":"1982","weight":5.8315215,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"유의어","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":5,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"4906dd9e1db4fb1688e63e0c9f872b84","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"튜링 테스트의 목적을 알려줘","docID":"175","contentNo":"제4장","enforcement":"1982","weight":5.694207,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"부연설명(동사)","cpname":"faq_clause","domain":"faq","lawCode":"023101"}]}INFO:werkzeug:129.254.186.88 - - [19/May/2020 09:57:53] "[37mPOST /result HTTP/1.1[0m" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 1347
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 17:36:35] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 17:36:35] "[33mGET /js/materialize.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 17:36:35] "[33mGET /js/init.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 17:36:35] "[33mGET /js/materialize.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 17:36:35] "[33mGET /js/init.js HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 1347
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 17:36:35] "[37mGET /combine HTTP/1.1[0m" 200 -
+
+dict
+2
+grpc
+ 이름 : combine-law / 통신 포트 : 32331
+dict
+2
+grpc
+ 이름 : combine-law / 통신 포트 : 32331
+test Done
+received: {
+"quizMetaData" : 
+	{
+	"strQOrigin" : "",
+	"strQRound" : "",
+	"uiNum" : 0,
+	"strQForm" : "",
+	"strQCat" : "",
+	"strQuestion" : "김영란법이 뭐야?",
+	"mQOptions" : 
+	[
+	],
+	"mQCompOpts" :
+	[
+	],
+	"vQCompAnswerCands" : [],
+	"mQHints" :
+	[
+	]
+	},
+"orgQInfo" : 
+	{
+	"orgQUnit" : 
+		{
+		"strQuestion" : "김영란법이 뭐야?",
+		"strTaggedQ" : "<CV_LAW:김영란법/NNP>+이/JKS 뭐/NP+이/VCP+야/EF+?/SF",
+		"ndoc" : 
+		{"doc_id" : "",
+ "DCT" : "",
+ "category" : "",
+ "category_weight" : 0,
+ "title" : {"text" : "", "NE" : ""},
+ "metaInfo" : { },
+ "paragraphInfo" : [
+ ], 
+ "sentence" : [
+	{
+	"id" : 0,
+	"reserve_str" : "",
+	"text" : "김영란법이 뭐야?",
+	"morp" : [
+		{"id" : 0, "lemma" : "김영란법", "type" : "NNP", "position" : 0, "weight" : 0.6 },
+		{"id" : 1, "lemma" : "이", "type" : "JKS", "position" : 12, "weight" : 0.0234517 },
+		{"id" : 2, "lemma" : "뭐", "type" : "NP", "position" : 16, "weight" : 0.0245792 },
+		{"id" : 3, "lemma" : "이", "type" : "VCP", "position" : 19, "weight" : 0.0175768 },
+		{"id" : 4, "lemma" : "야", "type" : "EF", "position" : 19, "weight" : 0.212983 },
+		{"id" : 5, "lemma" : "?", "type" : "SF", "position" : 22, "weight" : 1 }
+	],
+	"morp_eval" : [
+		{"id" : 0, "result" : "김영란법/NNG+이/JKS", "target" : "김영란법이", "word_id" : 0, "m_begin" : 0, "m_end" : 1},
+		{"id" : 1, "result" : "뭐/NP+이/VCP+야/EF+?/SF", "target" : "뭐야?", "word_id" : 1, "m_begin" : 2, "m_end" : 5}
+	],
+	"WSD" : [
+		{"id" : 0, "text" : "김영란법", "type" : "NNP", "scode" : "00", "weight" : 0, "position" : 0, "begin" : 0, "end" : 0},
+		{"id" : 1, "text" : "이", "type" : "JKS", "scode" : "00", "weight" : 1, "position" : 12, "begin" : 1, "end" : 1},
+		{"id" : 2, "text" : "뭐", "type" : "NP", "scode" : "00", "weight" : 0, "position" : 16, "begin" : 2, "end" : 2},
+		{"id" : 3, "text" : "이", "type" : "VCP", "scode" : "01", "weight" : 1, "position" : 19, "begin" : 3, "end" : 3},
+		{"id" : 4, "text" : "야", "type" : "EF", "scode" : "00", "weight" : 1, "position" : 19, "begin" : 4, "end" : 4},
+		{"id" : 5, "text" : "?", "type" : "SF", "scode" : "00", "weight" : 1, "position" : 22, "begin" : 5, "end" : 5}
+	],
+	"word" : [
+		{"id" : 0, "text" : "김영란법이", "type" : "", "begin" : 0, "end" : 1},
+		{"id" : 1, "text" : "뭐야?", "type" : "", "begin" : 2, "end" : 5}
+	],
+	"NE" : [
+		{"id" : 0, "text" : "김영란법", "type" : "CV_LAW", "begin" : 0, "end" : 0, "weight" : 0.172433, "common_noun" : 0}
+	],
+	"chunk" : [
+	],
+	"dependency" : [
+		{"id" : 0, "text" : "김영란법이", "head" : 1, "label" : "NP_SBJ", "mod" : [], "weight" : 0.631325 },
+		{"id" : 1, "text" : "뭐야?", "head" : -1, "label" : "VNP", "mod" : [0], "weight" : 0.495243 }
+	],
+	"phrase_dependency" : [
+		{"id" : 0, "label" : "NP_SBJ", "text" : "김영란법이", "begin" : 0, "end" : 0, "key_begin" : 0, "head_phrase" : 1, "sub_phrase" : [], "weight" : 0, "element" : [] },
+		{"id" : 1, "label" : "S", "text" : "P#0@SBJ이 뭐야?", "begin" : 0, "end" : 1, "key_begin" : 1, "head_phrase" : -1, "sub_phrase" : [0], "weight" : 0, 
+			"element" : [
+				{ "text" : "뭐", "label" : "NP", "begin" : 2, "end" : 2, "ne_type" : "" },
+				{ "text" : "야?", "label" : "VP", "begin" : 3, "end" : 5, "ne_type" : "" }
+			] }
+	],
+	"SRL" : [
+	],
+	"relation" : [
+	],
+	"SA" : [
+	],
+	"ZA" : [
+	]
+	}
+ ],
+ "entity" : [
+ ]
+}
+,
+		"vQTs" :
+		[
+			{
+			"qt" : 3,
+			"strQTClue" : "뭐",
+			"uiSentID" : 0,
+			"normQTClue" : {"id" : 2, "lemma" : "뭐", "type" : "NP", "position" : 16}
+			}
+		],
+		"vQFs" :
+		[
+			{
+			"strQF" : "뭐",
+			"uiSentID" : 0,
+			"dWeightQF" : 1,
+			"vQF_Morp" : 
+			[
+				{"id" : 2, "lemma" : "뭐", "type" : "NP", "position" : 16}
+			]
+			}
+		],
+		"vLATs" :
+		[
+		],
+		"vSATs" :
+		[
+			{
+			"atSAT" : 1801,
+			"strSAT" : "DS_DEFINITION",
+			"expanse_SAT" : [],
+			"dWeightSAT" : 0.68,
+			"dConfidenceSAT" : 0.68
+			}
+		],
+		"vSATRoots" :
+		[
+			{
+			"atSAT" : 1801,
+			"strSAT" : "DS_DEFINITION",
+			"expanse_SAT" : [],
+			"dWeightSAT" : 0.68,
+			"dConfidenceSAT" : 0.68
+			}
+		],
+		"vTitles" :
+		[
+			{
+			"strEntity" : "김영란법",
+			"uiSentID" : 0,
+			"atEntityType" : 818,
+			"strEntityType" : "CV_LAW",
+			"dWeightTitle" : 0.650026,
+			"vEntity_Morp" : 
+			[
+				{"id" : 0, "lemma" : "김영란법", "type" : "NNP", "position" : 0}
+			],
+			"vEntityInfo" : 
+			[
+				{
+				"strNormEntity" : "김영란법",
+				"strOrgEntityTitle" : "부정청탁_및_금품등_수수의_금지에_관한_법률",
+				"strID" : "1253956",
+				"strExplain" : "부정청탁 및 금품 등 수수의 금지에 관한 법률(약칭 청탁금지법)은 대한민국에서 부정부패를 방지하기 위해 국민권익위원장이던 김영란의 제안으로 만들어진 법률로, 제안자의 이름을 따서 흔히 '김영란법'이라는 별칭으로 불린다. 공무원이나 공공기관 임직원, 학교 교직원 등이 일정 규모 이상의 (식사대접 3만원,선물 5만원,경조사비 10만원)상당의 금품을 받으면 직무 관련성이 없더라도 처벌하는 것을 골자로 하고 있다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/%EB%B6%80%EC%A0%95%EC%B2%AD%ED%83%81_%EB%B0%8F_%EA%B8%88%ED%92%88%EB%93%B1_%EC%88%98%EC%88%98%EC%9D%98_%EA%B8%88%EC%A7%80%EC%97%90_%EA%B4%80%ED%95%9C_%EB%B2%95%EB%A5%A0",
+				"dWeightEn" : 0.462117
+				},
+				{
+				"strNormEntity" : "김영란법",
+				"strOrgEntityTitle" : "김영란법",
+				"strID" : "8112355",
+				"strExplain" : "공직자 등에 대한 부정 청탁 및 공직자 등의 금품 등의 수수(收受)를 금지하는 법률. 공직자 등의 공정한 직무 수행을 보장하고 공공 기관에 대한 국민의 신뢰를 확보하는 것을 목적으로 2016년 9월 28일에 시행되었다. 정식 명칭은 ‘부정 청탁 및 금품 등 수수의 금지에 관한 법률’이다.",
+				"strURL" : "https://opendict.korean.go.kr/search/searchResult?focus_name=query&query=김영란법",
+				"dWeightEn" : 0.0
+				}
+			]
+			}
+		],
+		"vQTopic" :
+		[
+			{
+			"strEntity" : "김영란법",
+			"uiSentID" : 0,
+			"atEntityType" : 818,
+			"strEntityType" : "CV_LAW",
+			"dWeightTitle" : 0.650026,
+			"vEntity_Morp" : 
+			[
+				{"id" : 0, "lemma" : "김영란법", "type" : "NNP", "position" : 0}
+			],
+			"vEntityInfo" : 
+			[
+				{
+				"strNormEntity" : "김영란법",
+				"strOrgEntityTitle" : "부정청탁_및_금품등_수수의_금지에_관한_법률",
+				"strID" : "1253956",
+				"strExplain" : "부정청탁 및 금품 등 수수의 금지에 관한 법률(약칭 청탁금지법)은 대한민국에서 부정부패를 방지하기 위해 국민권익위원장이던 김영란의 제안으로 만들어진 법률로, 제안자의 이름을 따서 흔히 '김영란법'이라는 별칭으로 불린다. 공무원이나 공공기관 임직원, 학교 교직원 등이 일정 규모 이상의 (식사대접 3만원,선물 5만원,경조사비 10만원)상당의 금품을 받으면 직무 관련성이 없더라도 처벌하는 것을 골자로 하고 있다.",
+				"strURL" : "https://ko.wikipedia.org/wiki/%EB%B6%80%EC%A0%95%EC%B2%AD%ED%83%81_%EB%B0%8F_%EA%B8%88%ED%92%88%EB%93%B1_%EC%88%98%EC%88%98%EC%9D%98_%EA%B8%88%EC%A7%80%EC%97%90_%EA%B4%80%ED%95%9C_%EB%B2%95%EB%A5%A0",
+				"dWeightEn" : 0.462117
+				},
+				{
+				"strNormEntity" : "김영란법",
+				"strOrgEntityTitle" : "김영란법",
+				"strID" : "8112355",
+				"strExplain" : "공직자 등에 대한 부정 청탁 및 공직자 등의 금품 등의 수수(收受)를 금지하는 법률. 공직자 등의 공정한 직무 수행을 보장하고 공공 기관에 대한 국민의 신뢰를 확보하는 것을 목적으로 2016년 9월 28일에 시행되었다. 정식 명칭은 ‘부정 청탁 및 금품 등 수수의 금지에 관한 법률’이다.",
+				"strURL" : "https://opendict.korean.go.kr/search/searchResult?focus_name=query&query=김영란법",
+				"dWeightEn" : 0.0
+				}
+			]
+			}
+		],
+		"vQuotation" :
+		[
+		],
+		"spoInfo" : 
+		{
+			"topic" : 
+				{
+				"strEntity" : "김영란법",
+				"uiSentID" : 0,
+				"atEntityType" : 818,
+				"strEntityType" : "CV_LAW",
+				"dWeightTitle" : 0.372727,
+				"vEntity_Morp" : 
+				[
+					{"id" : 0, "lemma" : "김영란법", "type" : "NNP", "position" : 0}
+				],
+				"vEntityInfo" : 
+				[
+					{
+					"strNormEntity" : "김영란법",
+					"strOrgEntityTitle" : "부정청탁_및_금품등_수수의_금지에_관한_법률",
+					"strID" : "1253956",
+					"strExplain" : "부정청탁 및 금품 등 수수의 금지에 관한 법률(약칭 청탁금지법)은 대한민국에서 부정부패를 방지하기 위해 국민권익위원장이던 김영란의 제안으로 만들어진 법률로, 제안자의 이름을 따서 흔히 '김영란법'이라는 별칭으로 불린다. 공무원이나 공공기관 임직원, 학교 교직원 등이 일정 규모 이상의 (식사대접 3만원,선물 5만원,경조사비 10만원)상당의 금품을 받으면 직무 관련성이 없더라도 처벌하는 것을 골자로 하고 있다.",
+					"strURL" : "https://ko.wikipedia.org/wiki/%EB%B6%80%EC%A0%95%EC%B2%AD%ED%83%81_%EB%B0%8F_%EA%B8%88%ED%92%88%EB%93%B1_%EC%88%98%EC%88%98%EC%9D%98_%EA%B8%88%EC%A7%80%EC%97%90_%EA%B4%80%ED%95%9C_%EB%B2%95%EB%A5%A0",
+					"dWeightEn" : 0.462117
+					},
+					{
+					"strNormEntity" : "김영란법",
+					"strOrgEntityTitle" : "김영란법",
+					"strID" : "8112355",
+					"strExplain" : "공직자 등에 대한 부정 청탁 및 공직자 등의 금품 등의 수수(收受)를 금지하는 법률. 공직자 등의 공정한 직무 수행을 보장하고 공공 기관에 대한 국민의 신뢰를 확보하는 것을 목적으로 2016년 9월 28일에 시행되었다. 정식 명칭은 ‘부정 청탁 및 금품 등 수수의 금지에 관한 법률’이다.",
+					"strURL" : "https://opendict.korean.go.kr/search/searchResult?focus_name=query&query=김영란법",
+					"dWeightEn" : 0.0
+					}
+				]
+				},
+			"propClue" : 
+				{
+				"strInfo" : "뭐",
+				"strMorpNEInfo" : "뭐",
+				"vMorpInfo" : 
+				[
+					{"id" : 2, "lemma" : "뭐", "type" : "NP", "position" : 16}
+				],
+				"vNEInfo" : 
+				[
+				]
+				},
+			"topic_Const" : 
+				{
+				"loc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"time" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"comparison" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"etc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					}
+				},
+			"ans_Const" : 
+				{
+				"loc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"time" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"comparison" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					},
+				"etc" : 
+					{
+					"strInfo" : "",
+					"strMorpNEInfo" : "",
+					"vMorpInfo" : 
+					[
+					],
+					"vNEInfo" : 
+					[
+					]
+					}
+				},
+			"bIsComparison" : "FALSE"
+		},
+		"dIntegrativeConf" : 0.0
+		},
+	"qDecompType" : 3,
+	"strQDecompType" : "",
+	"vSubQRelation" : 
+	[
+	],
+	"vSubQInfo" : 
+	[
+	],
+	"dQH_Weight" : 0.0
+	},
+"QClassification" : 
+	{
+	"vQCType" : 
+	[
+	{
+	"qType4Chg" : 320,
+	"strQType4Chg" : "서술형-정의",
+	"dWeightCQT" : 0.68
+	}
+	]
+	}
+}
+||0||{}||0||{"faq_clause":[{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":1,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"e4b5595642d979e63dfa579b3d0d0a72","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"김영란법이 시행된 것은 언제인가요?","docID":"74003","contentNo":"제4장","enforcement":"1982","weight":13.322596,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":2,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"4a3ca12e31f41e91cc3923f4536ce142","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"김영란법은 언제 제정되었나요?","docID":"74002","contentNo":"제4장","enforcement":"1982","weight":10.937662,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":3,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"2de5fcf52c318df4ca65c4d36024168a","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"4대강이 뭐야?","docID":"39","contentNo":"제4장","enforcement":"1982","weight":6.471757,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"탈락","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":4,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"74da70130bdf0a7177084364886bb188","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"AKS 소수판별법이 판별하는 것은 뭐야?","docID":"174002","contentNo":"제4장","enforcement":"1982","weight":5.6664186,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"},{"nation":"중국","ne_position":"","contentText":"제4장 국기, 국가, 국장, 수도","type":"clause","clause_ne_idx":"","Ranking":5,"searcherType":"FAQ Searcher","documentReliability":0,"reranking_feat":[],"rowkey":"4f71566b8c4fd7be122ecd8ce1c027ab","orgPsg":"","clause":"중화인민공화국의 국장은 복판에 5개의 별이 비춰주는 천안문이 있고 테두리에는 곡식이삭과 치륜(齒輪)이 있다.","clauseTitle_ne_idx":"","pos_position":"","question":"퀘이커의 창시자 이름이 뭐야?","docID":"173002","contentNo":"제4장","enforcement":"1982","weight":5.5644827,"qType":"org","clauseNo":"142","clauseTitle":"","answer":"NULL","cpname":"faq_clause","domain":"faq","lawCode":"023101"}]}INFO:werkzeug:129.254.186.88 - - [19/May/2020 17:36:50] "[37mPOST /result HTTP/1.1[0m" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 2572
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 17:37:39] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 17:37:39] "[33mGET /js/materialize.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 17:37:39] "[33mGET /js/init.js HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 129.254.165.43:8001
+DEBUG:urllib3.connectionpool:http://129.254.165.43:8001 "GET /api/v1/namespaces/default/services?labelSelector=type%3Dops HTTP/1.1" 200 2572
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 17:37:39] "[37mGET /combine HTTP/1.1[0m" 200 -
+INFO:werkzeug:129.254.186.88 - - [19/May/2020 17:37:46] "[37mPOST /result HTTP/1.1[0m" 200 -

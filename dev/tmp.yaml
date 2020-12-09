@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: psfaq
+  labels:
+    app: psfaq
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: psfaq
+  template:
+    metadata:
+      labels:
+        app: psfaq
+    spec:
+      containers:
+      - env:
+        - name: psfaq
+          value: development
+        image: 129.254.165.43:5000/psfaq:1.1
+        imagePullPolicy: Always
+        command: ["/bin/sh", "-c"]
+#        command: ["/bin/bash"]
+        args:
+#          - sleep 10000000
+          - service ssh start; cd /root/grpc_nanum/module;./run.sh; while true; do sleep 3600; done;
+        name: psfaq
+        ports:
+          - containerPort: 50051
+#          resources:
+#            requests:
+#              cpu: 100m
+      imagePullSecrets:
+      - name: docker-registry-login
+

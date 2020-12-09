@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: johab
+  labels:
+    app: johab
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: johab
+  template:
+    metadata:
+      labels:
+        app: johab
+    spec:
+      containers:
+      - env:
+        - name: johab
+          value: development
+        image: 14.49.45.90:5000/johab:t2
+        imagePullPolicy: Always
+        args:
+        name: johab
+      imagePullSecrets:
+      - name: docker-registry-login

@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: johabhwi10
+  labels:
+    app: johabhwi10
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: johabhwi10
+  template:
+    metadata:
+      labels:
+        app: johabhwi10
+    spec:
+      containers:
+      - env:
+        - name: johabhwi10
+          value: development
+        image: 129.254.165.43:5000/johab:hwi10
+        imagePullPolicy: Always
+        command: ['/bin/sh', '-c']
+        args:
+          - python3 test_client.py
+        name: johabhwi10
+      imagePullSecrets:
+      - name: docker-registry-login
+
